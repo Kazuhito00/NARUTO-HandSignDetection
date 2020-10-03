@@ -220,16 +220,16 @@ def main():
                                                   (0, 0), font_path,
                                                   int(frame_width / 18),
                                                   (255, 255, 255))
+        if (time.time() - jutsu_display_start_time) < jutsu_display_time:
+            if jutsu[jutsu_display_index][0] == '':
+                jutsu_string = jutsu[jutsu_display_index][2 + lang_offset]
             else:
-                if jutsu[jutsu_display_index][0] == '':
-                    jutsu_string = jutsu[jutsu_display_index][2 + lang_offset]
-                else:
-                    jutsu_string = jutsu[jutsu_display_index][0 + lang_offset] + '・' + \
-                        jutsu[jutsu_display_index][2 + lang_offset]
-                footer_image = CvDrawText.puttext(footer_image, jutsu_string,
-                                                  (0, 0), font_path,
-                                                  int(frame_width / 18),
-                                                  (255, 255, 255))
+                jutsu_string = jutsu[jutsu_display_index][0 + lang_offset] + '・' + \
+                    jutsu[jutsu_display_index][2 + lang_offset]
+            footer_image = CvDrawText.puttext(footer_image, jutsu_string,
+                                              (0, 0), font_path,
+                                              int(frame_width / 18),
+                                              (255, 255, 255))
         debug_image = cv.vconcat([header_image, debug_image])
         debug_image = cv.vconcat([debug_image, footer_image])
         cv.imshow('NARUTO HandSignDetection Ninjutsu Demo', debug_image)
