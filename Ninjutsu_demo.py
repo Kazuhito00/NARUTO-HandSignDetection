@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# python Ninjutsu_demo.py --file=03.mp4 --frame_skip=2 --score_th=0.5
+# python Ninjutsu_demo.py --file=03.mp4 --frame_skip=1 --score_th=0.75
 
 import argparse
 import csv
@@ -27,7 +27,7 @@ def get_args():
     parser.add_argument("--height", help='cap height', type=int, default=540)
 
     parser.add_argument("--model", default='model/EfficientDetD0/saved_model')
-    parser.add_argument("--score_th", type=float, default=0.5)
+    parser.add_argument("--score_th", type=float, default=0.75)
     parser.add_argument("--frame_skip", type=int, default=0)
 
     parser.add_argument("--sign_interval", type=float, default=2.0)
@@ -70,8 +70,10 @@ def main():
     erase_bbox = args.erase_bbox
     use_jutsu_lang_en = args.use_jutsu_lang_en
     lang_offset = 0
+    jutsu_font_size_ratio = 18
     if use_jutsu_lang_en:
         lang_offset = 1
+        jutsu_font_size_ratio = 24
 
     if args.file is not None:
         cap_device = args.file
@@ -108,8 +110,8 @@ def main():
     sign_history_queue = deque(maxlen=44)
     jutsu_display_index = 0
 
-    sign_interval_start = time.time()
-    jutsu_display_start_time = time.time()
+    sign_interval_start = 0
+    jutsu_display_start_time = 0
 
     while True:
         start_time = time.time()
@@ -226,10 +228,9 @@ def main():
             else:
                 jutsu_string = jutsu[jutsu_display_index][0 + lang_offset] + '・' + \
                     jutsu[jutsu_display_index][2 + lang_offset]
-            footer_image = CvDrawText.puttext(footer_image, jutsu_string,
-                                              (0, 0), font_path,
-                                              int(frame_width / 18),
-                                              (255, 255, 255))
+            footer_image = CvDrawText.puttext(
+                footer_image, jutsu_string, (0, 0), font_path,
+                int(frame_width / jutsu_font_size_ratio), (255, 255, 255))
         debug_image = cv.vconcat([header_image, debug_image])
         debug_image = cv.vconcat([debug_image, footer_image])
         cv.imshow('NARUTO HandSignDetection Ninjutsu Demo', debug_image)
