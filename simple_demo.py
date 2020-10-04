@@ -21,7 +21,7 @@ def get_args():
     parser.add_argument("--height", help='cap height', type=int, default=540)
 
     parser.add_argument("--model", default='model/EfficientDetD0/saved_model')
-    parser.add_argument("--score_th", type=float, default=0.5)
+    parser.add_argument("--score_th", type=float, default=0.75)
     parser.add_argument("--frame_skip", type=int, default=0)
 
     args = parser.parse_args()
