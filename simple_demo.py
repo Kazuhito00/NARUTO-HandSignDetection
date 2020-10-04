@@ -129,7 +129,7 @@ def main():
 
         # 画面反映 #############################################################
         cv.imshow('NARUTO HandSignDetection Simple Demo', debug_image)
-        cv.moveWindow('NARUTO HandSignDetection Simple Demo', 100, 100)
+        # cv.moveWindow('NARUTO HandSignDetection Simple Demo', 100, 100)
 
     cap.release()
     cv.destroyAllWindows()
