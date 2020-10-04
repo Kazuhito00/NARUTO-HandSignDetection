@@ -35,6 +35,8 @@ def get_args():
     parser.add_argument("--erase_bbox", type=bool, default=False)
     parser.add_argument("--use_jutsu_lang_en", type=bool, default=False)
 
+    parser.add_argument("--use_fullscreen", type=bool, default=False)
+
     args = parser.parse_args()
 
     return args
@@ -72,6 +74,8 @@ def main():
     use_display_score = args.use_display_score
     erase_bbox = args.erase_bbox
     use_jutsu_lang_en = args.use_jutsu_lang_en
+
+    use_fullscreen = args.use_fullscreen
 
     # カメラ準備 ###############################################################
     cap = cv.VideoCapture(cap_device)
@@ -115,6 +119,10 @@ def main():
     sign_interval_start = 0  # 印のインターバル開始時間初期化
     jutsu_start_time = 0  # 術名表示の開始時間初期化
     frame_count = 0  # フレームナンバーカウンタ
+
+    window_name = 'NARUTO HandSignDetection Ninjutsu Demo'
+    if use_fullscreen:
+        cv.namedWindow(window_name, cv.WINDOW_NORMAL)
 
     while True:
         start_time = time.time()
@@ -193,8 +201,11 @@ def main():
             jutsu_index,
             jutsu_start_time,
         )
-        cv.imshow('NARUTO HandSignDetection Ninjutsu Demo', debug_image)
-        # cv.moveWindow('NARUTO HandSignDetection Ninjutsu Demo', 100, 100)
+        if use_fullscreen:
+            cv.setWindowProperty(window_name, cv.WND_PROP_FULLSCREEN,
+                                 cv.WINDOW_FULLSCREEN)
+        cv.imshow(window_name, debug_image)
+        # cv.moveWindow(window_name, 100, 100)
 
     cap.release()
     cv.destroyAllWindows()
