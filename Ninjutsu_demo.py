@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# python Ninjutsu_demo.py --file=03.mp4 --frame_skip=1 --score_th=0.75
-
 import argparse
 import csv
 import time
@@ -33,6 +31,7 @@ def get_args():
     parser.add_argument("--sign_interval", type=float, default=2.0)
     parser.add_argument("--jutsu_display_time", type=int, default=5)
 
+    parser.add_argument("--use_display_score", type=bool, default=False)
     parser.add_argument("--erase_bbox", type=bool, default=False)
     parser.add_argument("--use_jutsu_lang_en", type=bool, default=False)
 
@@ -67,7 +66,9 @@ def main():
     sign_interval = args.sign_interval
     jutsu_display_time = args.jutsu_display_time
 
+    use_display_score = args.use_display_score
     erase_bbox = args.erase_bbox
+
     use_jutsu_lang_en = args.use_jutsu_lang_en
     lang_offset = 0
     jutsu_font_size_ratio = 18
@@ -176,6 +177,14 @@ def main():
                 debug_image, labels[class_id][1],
                 (square_x2 - font_size, square_y2 - font_size), font_path,
                 font_size, (185, 0, 0))
+
+            if use_display_score:
+                font_size = int(square_len / 8)
+                debug_image = CvDrawText.puttext(
+                    debug_image, '{:.3f}'.format(score),
+                    (square_x1 + int(font_size / 4),
+                     square_y1 + int(font_size / 4)), font_path, font_size,
+                    (185, 0, 0))
 
         if (time.time() - sign_interval_start) > sign_interval:
             sign_display_queue.clear()
