@@ -106,17 +106,18 @@ def main():
         jutsu = [row for row in jutsu]
 
     # 印の表示履歴および、検出履歴 ##############################################
-    # ToDo：履歴キュー数の変数化
-    sign_display_queue = deque(maxlen=18)
-    sign_history_queue = deque(maxlen=44)
+    sign_max_display = 18
+    sign_max_history = 44
+    sign_display_queue = deque(maxlen=sign_max_display)
+    sign_history_queue = deque(maxlen=sign_max_history)
     jutsu_index = 0
 
     # 術名の言語設定 ###########################################################
     lang_offset = 0
-    jutsu_font_size_ratio = 18
+    jutsu_font_size_ratio = sign_max_display
     if use_jutsu_lang_en:
         lang_offset = 1
-        jutsu_font_size_ratio = 24
+        jutsu_font_size_ratio = int((sign_max_display / 3) * 4)
 
     # その他変数初期化 #########################################################
     sign_interval_start = 0  # 印のインターバル開始時間初期化
@@ -204,6 +205,7 @@ def main():
             use_display_score,
             jutsu,
             sign_display_queue,
+            sign_max_display,
             jutsu_display_time,
             jutsu_font_size_ratio,
             lang_offset,
@@ -251,6 +253,7 @@ def draw_debug_image(
     use_display_score,
     jutsu,
     sign_display_queue,
+    sign_max_display,
     jutsu_display_time,
     jutsu_font_size_ratio,
     lang_offset,
@@ -259,7 +262,7 @@ def draw_debug_image(
 ):
     frame_width, frame_height = debug_image.shape[1], debug_image.shape[0]
 
-    # 印のバウンディングボックスの重畳表示 #######################################
+    # 印のバウンディングボックスの重畳表示(表示オプション有効時) ###################
     if not erase_bbox:
         num_detections = result_inference['num_detections']
         for i in range(num_detections):
@@ -293,7 +296,7 @@ def draw_debug_image(
                 (square_x2 - font_size, square_y2 - font_size), font_path,
                 font_size, (185, 0, 0))
 
-            # 検出スコア(表示指定オプション有効時)
+            # 検出スコア(表示オプション有効時)
             if use_display_score:
                 font_size = int(square_len / 8)
                 debug_image = CvDrawText.puttext(debug_image,
@@ -303,10 +306,10 @@ def draw_debug_image(
                                                 font_path, font_size, (185, 0, 0))
 
     # ヘッダー作成：FPS #########################################################
-    header_image = np.zeros((int(frame_height / 12), frame_width, 3), np.uint8)
+    header_image = np.zeros((int(frame_height / 14), frame_width, 3), np.uint8)
     header_image = CvDrawText.puttext(header_image, "FPS:" + str(fps_result),
-                                      (10, 4), font_path,
-                                      int(frame_height / 16), (255, 255, 255))
+                                      (0, 0), font_path,
+                                      int(frame_height / 14), (255, 255, 255))
 
     # フッター作成：印の履歴、および、術名表示 ####################################
     footer_image = np.zeros((int(frame_height / 10), frame_width, 3), np.uint8)
@@ -330,7 +333,8 @@ def draw_debug_image(
     # 印表示
     else:
         footer_image = CvDrawText.puttext(footer_image, sign_display, (0, 0),
-                                          font_path, int(frame_width / 18),
+                                          font_path, 
+                                          int(frame_width / sign_max_display),
                                           (255, 255, 255))
 
     # ヘッダーとフッターをデバッグ画像へ結合 ######################################
