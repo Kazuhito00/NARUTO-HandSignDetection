@@ -19,14 +19,15 @@ def get_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--device", type=int, default=0)
-    parser.add_argument("--file", type=str, default=None)
-    parser.add_argument("--fps", type=int, default=10)
     parser.add_argument("--width", help='cap width', type=int, default=960)
     parser.add_argument("--height", help='cap height', type=int, default=540)
+    parser.add_argument("--file", type=str, default=None)
+
+    parser.add_argument("--fps", type=int, default=10)
+    parser.add_argument("--skip_frame", type=int, default=0)
 
     parser.add_argument("--model", default='model/EfficientDetD0/saved_model')
     parser.add_argument("--score_th", type=float, default=0.75)
-    parser.add_argument("--frame_skip", type=int, default=0)
 
     parser.add_argument("--sign_interval", type=float, default=2.0)
     parser.add_argument("--jutsu_display_time", type=int, default=5)
@@ -56,14 +57,15 @@ def run_inference_single_image(image, inference_func):
 def main():
     # 引数解析 #################################################################
     args = get_args()
+
     cap_width = args.width
     cap_height = args.height
-    fps = args.fps
-    frame_skip = args.frame_skip
-
     cap_device = args.device
     if args.file is not None:  # 動画ファイルを利用する場合
         cap_device = args.file
+
+    fps = args.fps
+    skip_frame = args.skip_frame
 
     model_path = args.model
     score_th = args.score_th
@@ -82,15 +84,15 @@ def main():
     cap.set(cv.CAP_PROP_FRAME_WIDTH, cap_width)
     cap.set(cv.CAP_PROP_FRAME_HEIGHT, cap_height)
 
-    # モデルロード #############################################################
+    # モデル読み込み ############################################################
     DEFAULT_FUNCTION_KEY = 'serving_default'
     loaded_model = tf.saved_model.load(model_path)
     inference_func = loaded_model.signatures[DEFAULT_FUNCTION_KEY]
 
-    # FPS #####################################################################
+    # FPS計測モジュール #########################################################
     cvFpsCalc = CvFpsCalc()
 
-    # フォント #################################################################
+    # フォント読み込み ##########################################################
     # https://opentype.jp/kouzanmouhitufont.htm
     font_path = './utils/font/衡山毛筆フォント.ttf'
 
@@ -104,6 +106,7 @@ def main():
         jutsu = [row for row in jutsu]
 
     # 印の表示履歴および、検出履歴 ##############################################
+    # ToDo：履歴キュー数の変数化
     sign_display_queue = deque(maxlen=18)
     sign_history_queue = deque(maxlen=44)
     jutsu_index = 0
@@ -129,13 +132,12 @@ def main():
 
         # カメラキャプチャ #####################################################
         ret, frame = cap.read()
-        frame_count += 1
         if not ret:
             continue
-        frame_width, frame_height = frame.shape[1], frame.shape[0]
+        frame_count += 1
         debug_image = copy.deepcopy(frame)
 
-        if (frame_count % (frame_skip + 1)) != 0:
+        if (frame_count % (skip_frame + 1)) != 0:
             continue
 
         # FPS計測 ##############################################################
@@ -156,6 +158,7 @@ def main():
             if score < score_th:
                 continue
 
+            # ToDo：複数回検出チェックの実装
             if len(sign_display_queue) == 0 or \
                 sign_display_queue[-1] != class_id:
                 sign_display_queue.append(class_id)
@@ -166,6 +169,15 @@ def main():
         if (time.time() - sign_interval_start) > sign_interval:
             sign_display_queue.clear()
             sign_history_queue.clear()
+
+        # 術成立判定 #########################################################
+        jutsu_index, jutsu_start_time = check_jutsu(
+            sign_history_queue,
+            labels,
+            jutsu,
+            jutsu_index,
+            jutsu_start_time,
+        )
 
         # キー処理 ###########################################################
         key = cv.waitKey(1)
@@ -181,10 +193,8 @@ def main():
         time.sleep(sleep_time)
 
         # 画面反映 #############################################################
-        debug_image, jutsu_index, jutsu_start_time = draw_debug_image(
+        debug_image = draw_debug_image(
             debug_image,
-            frame_height,
-            frame_width,
             font_path,
             fps_result,
             labels,
@@ -194,7 +204,6 @@ def main():
             use_display_score,
             jutsu,
             sign_display_queue,
-            sign_history_queue,
             jutsu_display_time,
             jutsu_font_size_ratio,
             lang_offset,
@@ -211,10 +220,28 @@ def main():
     cv.destroyAllWindows()
 
 
+def check_jutsu(
+    sign_history_queue,
+    labels,
+    jutsu,
+    jutsu_index,
+    jutsu_start_time,
+):
+    # 印の履歴から術名をマッチング
+    sign_history = ''
+    if len(sign_history_queue) > 0:
+        for sign_id in sign_history_queue:
+            sign_history = sign_history + labels[sign_id][1]
+        for index, signs in enumerate(jutsu):
+            if sign_history == ''.join(signs[4:]):
+                jutsu_index = index
+                jutsu_start_time = time.time()  # 術の最終検出時間
+                break
+
+    return jutsu_index, jutsu_start_time
+
 def draw_debug_image(
     debug_image,
-    frame_height,
-    frame_width,
     font_path,
     fps_result,
     labels,
@@ -224,54 +251,56 @@ def draw_debug_image(
     use_display_score,
     jutsu,
     sign_display_queue,
-    sign_history_queue,
     jutsu_display_time,
     jutsu_font_size_ratio,
     lang_offset,
     jutsu_index,
     jutsu_start_time,
 ):
+    frame_width, frame_height = debug_image.shape[1], debug_image.shape[0]
+
     # 印のバウンディングボックスの重畳表示 #######################################
-    num_detections = result_inference['num_detections']
-    for i in range(num_detections):
-        score = result_inference['detection_scores'][i]
-        bbox = result_inference['detection_boxes'][i]
-        class_id = result_inference['detection_classes'][i].astype(np.int)
+    if not erase_bbox:
+        num_detections = result_inference['num_detections']
+        for i in range(num_detections):
+            score = result_inference['detection_scores'][i]
+            bbox = result_inference['detection_boxes'][i]
+            class_id = result_inference['detection_classes'][i].astype(np.int)
 
-        if score < score_th or erase_bbox:
-            continue
+            if score < score_th:
+                continue
 
-        x1, y1 = int(bbox[1] * frame_width), int(bbox[0] * frame_height)
-        x2, y2 = int(bbox[3] * frame_width), int(bbox[2] * frame_height)
+            x1, y1 = int(bbox[1] * frame_width), int(bbox[0] * frame_height)
+            x2, y2 = int(bbox[3] * frame_width), int(bbox[2] * frame_height)
 
-        # バウンディングボックス(長い辺にあわせて正方形を表示)
-        x_len = x2 - x1
-        y_len = y2 - y1
-        square_len = x_len if x_len >= y_len else y_len
-        square_x1 = int(((x1 + x2) / 2) - (square_len / 2))
-        square_y1 = int(((y1 + y2) / 2) - (square_len / 2))
-        square_x2 = square_x1 + square_len
-        square_y2 = square_y1 + square_len
-        cv.rectangle(debug_image, (square_x1, square_y1),
-                     (square_x2, square_y2), (255, 255, 255), 4)
-        cv.rectangle(debug_image, (square_x1, square_y1),
-                     (square_x2, square_y2), (0, 0, 0), 2)
+            # バウンディングボックス(長い辺にあわせて正方形を表示)
+            x_len = x2 - x1
+            y_len = y2 - y1
+            square_len = x_len if x_len >= y_len else y_len
+            square_x1 = int(((x1 + x2) / 2) - (square_len / 2))
+            square_y1 = int(((y1 + y2) / 2) - (square_len / 2))
+            square_x2 = square_x1 + square_len
+            square_y2 = square_y1 + square_len
+            cv.rectangle(debug_image, (square_x1, square_y1),
+                        (square_x2, square_y2), (255, 255, 255), 4)
+            cv.rectangle(debug_image, (square_x1, square_y1),
+                        (square_x2, square_y2), (0, 0, 0), 2)
 
-        # 印名
-        font_size = int(square_len / 2)
-        debug_image = CvDrawText.puttext(
-            debug_image, labels[class_id][1],
-            (square_x2 - font_size, square_y2 - font_size), font_path,
-            font_size, (185, 0, 0))
+            # 印の種類
+            font_size = int(square_len / 2)
+            debug_image = CvDrawText.puttext(
+                debug_image, labels[class_id][1],
+                (square_x2 - font_size, square_y2 - font_size), font_path,
+                font_size, (185, 0, 0))
 
-        # 検出スコア(表示指定オプション有効時)
-        if use_display_score:
-            font_size = int(square_len / 8)
-            debug_image = CvDrawText.puttext(debug_image,
-                                             '{:.3f}'.format(score),
-                                             (square_x1 + int(font_size / 4),
-                                              square_y1 + int(font_size / 4)),
-                                             font_path, font_size, (185, 0, 0))
+            # 検出スコア(表示指定オプション有効時)
+            if use_display_score:
+                font_size = int(square_len / 8)
+                debug_image = CvDrawText.puttext(debug_image,
+                                                '{:.3f}'.format(score),
+                                                (square_x1 + int(font_size / 4),
+                                                square_y1 + int(font_size / 4)),
+                                                font_path, font_size, (185, 0, 0))
 
     # ヘッダー作成：FPS #########################################################
     header_image = np.zeros((int(frame_height / 12), frame_width, 3), np.uint8)
@@ -287,16 +316,6 @@ def draw_debug_image(
     if len(sign_display_queue) > 0:
         for sign_id in sign_display_queue:
             sign_display = sign_display + labels[sign_id][1]
-    # 印の履歴から術名をマッチング
-    sign_history = ''
-    if len(sign_history_queue) > 0:
-        for sign_id in sign_history_queue:
-            sign_history = sign_history + labels[sign_id][1]
-        for index, signs in enumerate(jutsu):
-            if sign_history == ''.join(signs[4:]):
-                jutsu_index = index
-                jutsu_start_time = time.time()  # 術の最終検出時間
-                break
 
     # 術名表示(指定時間描画)
     if (time.time() - jutsu_start_time) < jutsu_display_time:
@@ -308,7 +327,7 @@ def draw_debug_image(
         footer_image = CvDrawText.puttext(
             footer_image, jutsu_string, (0, 0), font_path,
             int(frame_width / jutsu_font_size_ratio), (255, 255, 255))
-    # 印名表示
+    # 印表示
     else:
         footer_image = CvDrawText.puttext(footer_image, sign_display, (0, 0),
                                           font_path, int(frame_width / 18),
@@ -318,7 +337,7 @@ def draw_debug_image(
     debug_image = cv.vconcat([header_image, debug_image])
     debug_image = cv.vconcat([debug_image, footer_image])
 
-    return debug_image, jutsu_index, jutsu_start_time
+    return debug_image
 
 
 if __name__ == '__main__':
