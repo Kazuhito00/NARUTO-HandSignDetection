@@ -1,6 +1,6 @@
 [Japanese/English]
 # NARUTO-HandSignDetection
-物体検出を用いてNARUTOの印(子～亥、壬、合掌)を検出するモデルとサンプルプログラムです。
+NARUTO-HandSignDetectionリポジトリは、物体検出を用いてNARUTOの印(子～亥、壬、合掌)を検出するモデルとサンプルプログラムです。
 
 
 # Title(タイトル)
