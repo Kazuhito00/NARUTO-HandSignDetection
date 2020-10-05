@@ -114,7 +114,7 @@ def main():
     sign_max_history = 44
     sign_display_queue = deque(maxlen=sign_max_display)
     sign_history_queue = deque(maxlen=sign_max_history)
-    
+
     chattering_check_queue = deque(maxlen=chattering_check)
     for index in range(-1, -1 - chattering_check, -1):
         chattering_check_queue.append(index)
@@ -256,6 +256,7 @@ def check_jutsu(
 
     return jutsu_index, jutsu_start_time
 
+
 def draw_debug_image(
     debug_image,
     font_path,
@@ -300,9 +301,9 @@ def draw_debug_image(
             square_x2 = square_x1 + square_len
             square_y2 = square_y1 + square_len
             cv.rectangle(debug_image, (square_x1, square_y1),
-                        (square_x2, square_y2), (255, 255, 255), 4)
+                         (square_x2, square_y2), (255, 255, 255), 4)
             cv.rectangle(debug_image, (square_x1, square_y1),
-                        (square_x2, square_y2), (0, 0, 0), 2)
+                         (square_x2, square_y2), (0, 0, 0), 2)
 
             # 印の種類
             font_size = int(square_len / 2)
@@ -314,17 +315,17 @@ def draw_debug_image(
             # 検出スコア(表示オプション有効時)
             if use_display_score:
                 font_size = int(square_len / 8)
-                debug_image = CvDrawText.puttext(debug_image,
-                                                '{:.3f}'.format(score),
-                                                (square_x1 + int(font_size / 4),
-                                                square_y1 + int(font_size / 4)),
-                                                font_path, font_size, (185, 0, 0))
+                debug_image = CvDrawText.puttext(
+                    debug_image, '{:.3f}'.format(score),
+                    (square_x1 + int(font_size / 4),
+                     square_y1 + int(font_size / 4)), font_path, font_size,
+                    (185, 0, 0))
 
     # ヘッダー作成：FPS #########################################################
-    header_image = np.zeros((int(frame_height / 14), frame_width, 3), np.uint8)
+    header_image = np.zeros((int(frame_height / 18), frame_width, 3), np.uint8)
     header_image = CvDrawText.puttext(header_image, "FPS:" + str(fps_result),
-                                      (0, 0), font_path,
-                                      int(frame_height / 14), (255, 255, 255))
+                                      (5, 0), font_path,
+                                      int(frame_height / 20), (255, 255, 255))
 
     # フッター作成：印の履歴、および、術名表示 ####################################
     footer_image = np.zeros((int(frame_height / 10), frame_width, 3), np.uint8)
@@ -336,19 +337,23 @@ def draw_debug_image(
             sign_display = sign_display + labels[sign_id][1]
 
     # 術名表示(指定時間描画)
+    if lang_offset == 0:
+        separate_string = '・'
+    else:
+        separate_string = '：'
     if (time.time() - jutsu_start_time) < jutsu_display_time:
         if jutsu[jutsu_index][0] == '':  # 属性(火遁等)の定義が無い場合
             jutsu_string = jutsu[jutsu_index][2 + lang_offset]
         else:  # 属性(火遁等)の定義が有る場合
-            jutsu_string = jutsu[jutsu_index][0 + lang_offset] + '・' + \
-                jutsu[jutsu_index][2 + lang_offset]
+            jutsu_string = jutsu[jutsu_index][0 + lang_offset] + \
+                separate_string + jutsu[jutsu_index][2 + lang_offset]
         footer_image = CvDrawText.puttext(
-            footer_image, jutsu_string, (0, 0), font_path,
+            footer_image, jutsu_string, (5, 0), font_path,
             int(frame_width / jutsu_font_size_ratio), (255, 255, 255))
     # 印表示
     else:
-        footer_image = CvDrawText.puttext(footer_image, sign_display, (0, 0),
-                                          font_path, 
+        footer_image = CvDrawText.puttext(footer_image, sign_display, (5, 0),
+                                          font_path,
                                           int(frame_width / sign_max_display),
                                           (255, 255, 255))
 
