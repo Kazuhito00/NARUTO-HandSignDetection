@@ -36,6 +36,8 @@ def get_args():
     parser.add_argument("--erase_bbox", type=bool, default=False)
     parser.add_argument("--use_jutsu_lang_en", type=bool, default=False)
 
+    parser.add_argument("--chattering_check", type=int, default=1)
+
     parser.add_argument("--use_fullscreen", type=bool, default=False)
 
     args = parser.parse_args()
@@ -77,6 +79,8 @@ def main():
     erase_bbox = args.erase_bbox
     use_jutsu_lang_en = args.use_jutsu_lang_en
 
+    chattering_check = args.chattering_check
+
     use_fullscreen = args.use_fullscreen
 
     # カメラ準備 ###############################################################
@@ -110,7 +114,10 @@ def main():
     sign_max_history = 44
     sign_display_queue = deque(maxlen=sign_max_display)
     sign_history_queue = deque(maxlen=sign_max_history)
-    jutsu_index = 0
+    
+    chattering_check_queue = deque(maxlen=chattering_check)
+    for index in range(-1, -1 - chattering_check, -1):
+        chattering_check_queue.append(index)
 
     # 術名の言語設定 ###########################################################
     lang_offset = 0
@@ -121,6 +128,7 @@ def main():
 
     # その他変数初期化 #########################################################
     sign_interval_start = 0  # 印のインターバル開始時間初期化
+    jutsu_index = 0  # 術表示名のインデックス
     jutsu_start_time = 0  # 術名表示の開始時間初期化
     frame_count = 0  # フレームナンバーカウンタ
 
@@ -156,10 +164,16 @@ def main():
             score = result_inference['detection_scores'][i]
             class_id = result_inference['detection_classes'][i].astype(np.int)
 
+            # 検出閾値未満の結果は捨てる
             if score < score_th:
                 continue
 
-            # ToDo：複数回検出チェックの実装
+            # 指定回数以上、同じ印が続いた場合に、印検出とみなす ※瞬間的な誤検出対策
+            chattering_check_queue.append(class_id)
+            if len(set(chattering_check_queue)) != 1:
+                continue
+
+            # 前回と異なる印の場合のみキューに登録
             if len(sign_display_queue) == 0 or \
                 sign_display_queue[-1] != class_id:
                 sign_display_queue.append(class_id)
@@ -270,6 +284,7 @@ def draw_debug_image(
             bbox = result_inference['detection_boxes'][i]
             class_id = result_inference['detection_classes'][i].astype(np.int)
 
+            # 検出閾値未満のバウンディングボックスは捨てる
             if score < score_th:
                 continue
 
