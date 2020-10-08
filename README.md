@@ -1,6 +1,7 @@
 [Japanese/English]
 # NARUTO-HandSignDetection
-物体検出を用いてNARUTOの印(子～亥、壬、合掌)を検出するモデルとサンプルプログラムです。
+物体検出を用いてNARUTOの印(子～亥、壬、合掌)を検出するモデルとサンプルプログラムです。<br>
+このリポジトリでは、Tensorflow2 Object Detection APIを使用しています。
 
 ![header](https://user-images.githubusercontent.com/37477845/95489808-4fb55c80-09d2-11eb-95f0-c3cdc6d55d83.png)
 <div align="center">
@@ -10,15 +11,10 @@
 
 ![footer](https://user-images.githubusercontent.com/37477845/95489817-5348e380-09d2-11eb-9df0-3ddd06703c55.png)
 
+---
 
-# Title(タイトル)
+# Title
 Deep写輪眼：ディープラーニングを用いたNARUTOの印の検出.
-
-# Authors(著者)
-
-# Affiliations(所属)
-
-# Keywords(キーワード)
 
 # Abstract(アブストラクト)
 
@@ -35,3 +31,11 @@ Deep写輪眼：ディープラーニングを用いたNARUTOの印の検出.
 # Acknowledgements(謝辞)
 
 # References(引用文献)
+
+# Affiliations(所属)
+
+# Authors
+高橋かずひと(https://twitter.com/KzhtTkhs)
+
+# License 
+NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
