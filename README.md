@@ -22,7 +22,7 @@ Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印
 Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract(アブストラクト)
-In this repository, we discuss the <div id="cite_ref-1">NARUTO's</div><sup>[1](#cite_note-1)</sup> hand sign recognition system that we have developed. <br>
+In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> hand sign recognition system that we have developed. <br>
 
 # Introduction
 
@@ -43,11 +43,11 @@ In this repository, we discuss the <div id="cite_ref-1">NARUTO's</div><sup>[1](#
 # Application example(応用例)
 
 # 注釈
-1. [^](#cite_ref-1)<div id="cite_note-1">XXXX</div>
-1. ^<div id="cite_note-2">XXXX</div>
-1. ^<div id="cite_note-3">XXXX</div>
-1. ^<div id="cite_note-4">XXXX</div>
-1. ^<div id="cite_note-5">XXXX</div>
+1. [^](#cite_ref-1)<span id="cite_note-1">XXXX</span>
+1. ^<span id="cite_note-2">XXXX</span>
+1. ^<span id="cite_note-3">XXXX</span>
+1. ^<span id="cite_note-4">XXXX</span>
+1. ^<span id="cite_note-5">XXXX</span>
 
 
 # Authors
