@@ -42,6 +42,12 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 # Usage
 
 # Application example(応用例)
+<!--
+* 認証 「****」開錠
+* アカデミー卒業試験対策 〇〇×
+* リモートコントロール
+* 六眼
+-->
 
 # Acknowledgements(謝辞)
 
