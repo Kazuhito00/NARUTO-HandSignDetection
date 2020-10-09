@@ -38,6 +38,8 @@ Deep写輪眼：ディープラーニングを用いたNARUTOの印の検出.
 
 # Affiliations(所属)
 
+# Application example(応用例)
+
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
 
