@@ -45,7 +45,7 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # Acknowledgements(謝辞)
 
-# References(引用文献)
+# References
 1. [^](#cite_ref-1)<span id="cite_note-1">XXXX</span>
 1. ^<span id="cite_note-2">XXXX</span>
 1. ^<span id="cite_note-3">XXXX</span>
