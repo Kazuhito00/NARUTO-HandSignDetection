@@ -22,8 +22,8 @@ Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印
 Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
-このリポジトリは、<span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br>
-忍術の発動には、手で印を結ぶことが必要です。※一部の忍術をのぞき<br>
+このリポジトリは、<span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
+忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、印を素早く認識することが出来れば、<br>
 忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
 本モデルではディープラーニングの物体検出モデルEfficientDetを用いて印を認識します。
