@@ -18,7 +18,7 @@
 ---
 
 # Title
-Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識システムの開発
+Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識システムの開発<br>
 Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract(アブストラクト)
