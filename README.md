@@ -33,12 +33,12 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # DataSet
 
-# Results(結果)
+# Results
 
-# Discussion(考察)
-
-# Conclusions(結論)
-
+<!-- # Discussion(考察)
+-->
+<!-- # Conclusions(結論)
+-->
 # Usage
 
 # Application example(応用例)
