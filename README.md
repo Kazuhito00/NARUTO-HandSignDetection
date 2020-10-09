@@ -34,15 +34,11 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # Conclusions(結論)
 
+# Application example(応用例)
+
 # Acknowledgements(謝辞)
 
 # References(引用文献)
-
-# Affiliations(所属)
-
-# Application example(応用例)
-
-# 注釈
 1. [^](#cite_ref-1)<span id="cite_note-1">XXXX</span>
 1. ^<span id="cite_note-2">XXXX</span>
 1. ^<span id="cite_note-3">XXXX</span>
@@ -52,6 +48,8 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
+
+# Affiliations(所属)
 
 # License 
 NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
