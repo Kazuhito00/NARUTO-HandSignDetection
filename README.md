@@ -53,7 +53,7 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 |壬(Mizunoe)|合掌(Gassho/Hnad Claps)|
 |:---:|:---:|
-|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%">|
+|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="50%">|<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="50%">|
 
 
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="100%">
