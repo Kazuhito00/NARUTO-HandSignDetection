@@ -33,13 +33,13 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # DataSet
 
-# Demo
-
 # Results(結果)
 
 # Discussion(考察)
 
 # Conclusions(結論)
+
+# Demo
 
 # Application example(応用例)
 
@@ -54,10 +54,10 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
-
 <!--
 # Affiliations(所属)
 -->
+
 # License 
 NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
