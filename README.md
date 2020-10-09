@@ -58,8 +58,8 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 # Acknowledgements(謝辞)
 
 # References
-1. [^](#cite_ref-1)<span id="cite_note-1">XXXX</span>
-1. ^<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
+1. [^](#cite_ref-1)<span id="cite_note-1">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
+1. ^<span id="cite_note-2">XXXX</span>
 1. ^<span id="cite_note-3">XXXX</span>
 1. ^<span id="cite_note-4">XXXX</span>
 1. ^<span id="cite_note-5">XXXX</span>
