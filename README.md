@@ -26,7 +26,14 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 
 # Introduction
 
-# Materials and methods(実験材料および方法)
+# Requirements
+* Tensorflow 2.3.0 or Later
+* OpenCV 3.4.2 or Later
+* Pillow 6.1.0 or Later
+
+# DataSet
+
+# Demo
 
 # Results(結果)
 
@@ -45,11 +52,14 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 1. ^<span id="cite_note-4">XXXX</span>
 1. ^<span id="cite_note-5">XXXX</span>
 
-
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
 
+<!--
 # Affiliations(所属)
-
+-->
 # License 
 NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+
+# License(Font)
+衡山毛筆フォント(https://opentype.jp/kouzanmouhitufont.htm)
