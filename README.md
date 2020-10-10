@@ -1,4 +1,4 @@
-[Japanese/English]
+[Japanese/[English](https://github.com/Kazuhito00/NARUTO-HandSignDetection/blob/main/README_EN.md)]
 
 ---
 # NARUTO-HandSignDetection
