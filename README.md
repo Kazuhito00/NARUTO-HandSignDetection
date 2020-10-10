@@ -85,7 +85,7 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 # Acknowledgements(謝辞)
 
 # References
-1. ^<span id="cite_note-1">[日本：著作権法 第二十条](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
+1. [^](#cite_ref-1)<span id="cite_note-1">[日本：著作権法 第二十条](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
 1. ^<span id="cite_note-3">XXXX</span>
 1. ^<span id="cite_note-4">XXXX</span>
