@@ -12,7 +12,7 @@
 
 右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作/集英社/studioぴえろ<br>
 ※<span id="cite_ref-1">日本の著作権法 第二十条「同一性保持権」</span><sup>[1](#cite_note-1)</sup>における「改変」に相当する可能性があるため、<br>
-　右図のバウンディングボックスのオーバーレイ表示は行わないようにしています。
+　右図にはバウンディングボックスのオーバーレイ表示は行わないようにしています。
 
 <!-- ![21](https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif)![22](https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif) -->
 </div>
@@ -32,7 +32,7 @@ Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Objec
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
 印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
-過去に試験的に作成していたDeep写輪眼(2019年版v1)よりも精度を大幅にアップしました。<br>
+過去に試験的に作成していたDeep写輪眼(MobileNetV2 SSD 300x300利用)よりも精度を大幅にアップしました。<br>
 (Tensorflow2 Object Detection APIを使用)
 
 In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> hand sign recognition system that we have developed. <br>
@@ -77,6 +77,47 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
 # Trained Model
+訓練済みモデルをmodelディレクトリ配下で公開しています。
+* EfficientDet D0
+* MobileNetV2 SSD FPNLite 640x640
+* MobileNetV2 SSD FPNLite 640x640(TensorFlow Liteモデル)
+* MobileNetV2 SSD 300x300
+
+# Directory
+<pre>
+│  simple_demo.py
+│  simple_tflite_demo.py
+│  Ninjutsu_demo.py
+│  
+├─model
+│  ├─EfficientDetD0─saved_model
+│  ├─MobileNetV2_SSD_300x300─saved_model
+│  └─MobileNetV2_SSD_FPNLite_640x640─┬─saved_model
+│                                    └─tflite
+├─setting─┬─labels.csv
+│         └─jutsu.csv
+│      
+└─utils
+</pre>
+#### simple_demo.py
+あああ
+
+#### simple_tflite_demo.py
+あああ
+
+#### Ninjutsu_demo.py
+あああ
+
+#### model
+あああ
+
+#### setting
+あああ
+
+#### utils
+あああ
+
+</details>
 
 # Results
 
