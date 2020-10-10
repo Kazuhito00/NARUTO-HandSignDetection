@@ -38,14 +38,14 @@ The accuracy has been greatly improved compared to the Deep写輪眼(using Mobil
 # Requirements
 * Tensorflow 2.3.0 or Later
 * OpenCV 3.4.2 or Later
-* Pillow 6.1.0 or Later (Ninjutsu_demo.pyを動かす場合のみ)
+* Pillow 6.1.0 or Later (Only when running Ninjutsu_demo.py)
 
 # DataSet
-### データセットについて
-データセットは非公開です（訓練済みのモデルは公開します）<br>
-※<span id="cite_ref-4">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[4](#cite_note-4)</sup>に準拠
+### About the dataset
+The dataset is private(trained models are public)<br>
+※Follow <span id="cite_ref-4">Article 47-7 of the Copyright Act of Japan "Transfer of reproductions made due to restrictions on reproduction rights"</span><sup>[4](#cite_note-4)</sup>
 
-また、自分で撮影した画像、アニメ画像の他に、<span id="cite_ref-5">naruto-hand-sign-dataset</span><sup>[5](#cite_note-5)</sup>を利用しています。
+In addition to the images I took and the anime images, I use <span id="cite_ref-5">naruto-hand-sign-dataset</span><sup>[5](#cite_note-5)</sup>.
 
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
