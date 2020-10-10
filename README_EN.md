@@ -21,18 +21,17 @@ Right figure：© NARUTO Episode 9 『Kakashi, Sharingan Warrior!』Masashi Kish
 ---
 
 # Title
-Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
+Deep写輪眼(Sharingan)：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
-このリポジトリは、<span id="cite_ref-2">NARUTO</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
+This repository publishes trained models and sample programs for recognizing the <span id="cite_ref-2">Naruto’s</span><sup>[2](#cite_note-2)</sup> hand sign(KATAS).
+
 忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
 印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
 過去に試験的に作成していたDeep写輪眼(MobileNetV2 SSD 300x300利用)よりも精度を大幅にアップしました。<br>
 (<span id="cite_ref-3">Tensorflow2 Object Detection API</span><sup>[3](#cite_note-3)</sup>を使用)
-
-In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> hand sign recognition system that we have developed. <br>
 
 <!--# Introduction
 -->
