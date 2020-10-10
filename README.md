@@ -138,6 +138,20 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 　Ninjutsu_demo.pyのみで使用します。
 
 # Usage
+デモの実行方法は以下です。
+```bash
+python simple_demo.py
+python simple_tflite_demo.py
+python Ninjutsu_demo.py
+```
+
+また、デモ実行時には、以下のオプションが指定可能です。
+* --device<br>カメラデバイス番号の指定 (デフォルト：0)
+* --width<br>カメラキャプチャ時の横幅 (デフォルト：960)
+* --height<br>カメラキャプチャ時の縦幅 (デフォルト：540)
+* --model<br>モデル読み込みパス (デフォルト：'model/EfficientDetD0/saved_model')
+* --score_th<br>物体検出閾値 (デフォルト：0.7)
+* --fps<br>処理FPS (デフォルト：10.1) ※推論時間がFPSを下回る場合のみ有効
 
 # Application Example(応用例)
 <!--
