@@ -186,7 +186,7 @@ python Ninjutsu_demo.py
     * simple_tflite_demo.py：0.3
     * Ninjutsu_demo.py：0.75
 * --skip_frame<br>
-カメラor動画読み込み時に何枚おきに処理を実行するか<br>
+カメラ or 動画読み込み時に何枚おきに処理を実行するか<br>
 デフォルト：
     * simple_demo.py：0
     * simple_tflite_demo.py：0
