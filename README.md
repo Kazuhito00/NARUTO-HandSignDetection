@@ -228,12 +228,10 @@ python Ninjutsu_demo.py
 </details>
 
 # Application Example(応用例)
-<!--
-* スマートグラス
-* 認証 「****」開錠
-* アカデミー卒業試験対策 〇〇×
-* リモートコントロール
--->
+|子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|
+|:---:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650559-4ede1100-0b1f-11eb-8532-488492181687.png" width="100%">|
+
 
 # Acknowledgements(謝辞)
 
