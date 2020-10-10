@@ -101,18 +101,15 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 </pre>
 #### simple_demo.py
 　シンプルな検出デモです。<br>
-　デフォルトでは「EfficientDetD0/saved_model」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647513-06b4f380-0b0b-11eb-8caf-5cb092ccdb66.jpg" width="35%">
 
 #### simple_tflite_demo.py
 　tfliteファイルを用いたシンプルな検出デモです。<br>
-　デフォルトでは「MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="35%">
 
 #### Ninjutsu_demo.py
 　忍術判定のデモです。<br>
 　印の履歴から術データ(jutsu.csv)にマッチする術名を表示します。<br>
-　デフォルトでは「EfficientDetD0/saved_model」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="35%">
 　<!--<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">-->
 
@@ -146,51 +143,85 @@ python Ninjutsu_demo.py
 ```
 
 また、デモ実行時には、以下のオプションが指定可能です。
-* --device<br>カメラデバイス番号の指定<br>
+* --device<br>
+カメラデバイス番号の指定<br>
 デフォルト：
     * simple_demo.py：0
     * simple_tflite_demo.py：0
     * Ninjutsu_demo.py：0
-* --file<br>動画ファイル名の指定 ※指定時はカメラデバイスより優先し動画を読み込む<br>
+* --file<br>
+動画ファイル名の指定 ※指定時はカメラデバイスより優先し動画を読み込む<br>
 デフォルト：
     * simple_demo.py：None
     * simple_tflite_demo.py：None
     * Ninjutsu_demo.py：None
-* --fps<br>処理FPS ※推論時間がFPSを下回る場合のみ有効<br>
+* --fps<br>
+処理FPS ※推論時間がFPSを下回る場合のみ有効<br>
 デフォルト：
     * simple_demo.py：10
     * simple_tflite_demo.py：10
     * Ninjutsu_demo.py：10
-* --width<br>カメラキャプチャ時の横幅<br>
+* --width<br>
+カメラキャプチャ時の横幅<br>
 デフォルト：
     * simple_demo.py：960
     * simple_tflite_demo.py：960
     * Ninjutsu_demo.py：960
-* --height<br>カメラキャプチャ時の縦幅<br>
+* --height<br>
+カメラキャプチャ時の縦幅<br>
 デフォルト：
     * simple_demo.py：540
     * simple_tflite_demo.py：540
     * Ninjutsu_demo.py：540
-* --model<br>モデル読み込みパス<br>
+* --model<br>
+モデル読み込みパス<br>
 デフォルト：
     * simple_demo.py：'model/EfficientDetD0/saved_model'
     * simple_tflite_demo.py：'model/MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite'
     * Ninjutsu_demo.py：'model/EfficientDetD0/saved_model'
-* --score_th<br>物体検出閾値<br>
+* --score_th<br>
+物体検出閾値<br>
 デフォルト：
     * simple_demo.py：0.75
     * simple_tflite_demo.py：0.3
     * Ninjutsu_demo.py：0.75
-* --frame_skip<br> (デフォルト：0.7)
-* --input_shape<br> (デフォルト：0.7)
-* --sign_interval<br> (デフォルト：0.7)
-* --jutsu_display_time<br> (デフォルト：0.7)
-* --use_display_score<br> (デフォルト：0.7)
-* --erase_bbox<br> (デフォルト：0.7)
-* --use_jutsu_lang_en<br> (デフォルト：0.7)
-* --chattering_check<br> (デフォルト：0.7)
-* --use_fullscreen<br> (デフォルト：0.7)
-
+* --skip_frame<br>
+カメラor動画読み込み時に何枚おきに処理を実行するか<br>
+デフォルト：
+    * simple_demo.py：0
+    * simple_tflite_demo.py：0
+    * Ninjutsu_demo.py：0
+* --input_shape<br>
+モデルへインプットする画像の一辺の長さ<br>
+    * simple_tflite_demo.py：640
+* --sign_interval<br>
+前回の印検出時から指定時間(秒)経過すると印の履歴をクリア<br>
+デフォルト：
+    * Ninjutsu_demo.py：2.0
+* --jutsu_display_time<br>
+術成立時に術名を表示する時間(秒)<br>
+デフォルト：
+    * Ninjutsu_demo.py：5
+* --use_display_score<br>
+印検出スコアを表示するか否か<br>
+デフォルト：
+    * Ninjutsu_demo.py：False
+* --erase_bbox<br>
+バウンディングボックスのオーバーレイ表示を消去するか否か<br>
+デフォルト：
+    * Ninjutsu_demo.py：False
+* --use_jutsu_lang_en<br>
+術名表示に英語表記を使用するか否か<br>
+デフォルト：
+    * Ninjutsu_demo.py：False
+* --chattering_check<br>
+印を何回連続で検出したら印の成立とみなすか(印の検出チラつき対策)<br>
+デフォルト：
+    * Ninjutsu_demo.py：1
+* --use_fullscreen<br>
+フルスクリーン表示を利用するか否か(試験的機能)<br>
+デフォルト：
+    * Ninjutsu_demo.py：False
 
 # Application Example(応用例)
 <!--
