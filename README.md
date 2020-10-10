@@ -11,7 +11,8 @@
 <img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="45%">　<img src="https://user-images.githubusercontent.com/37477845/95645297-97360880-0af8-11eb-9134-d92cbfb5fe42.gif" width="40%"><!--　<img src="https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif" width="45%">--><br>
 
 右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作/集英社/studioぴえろ<br>
-※<span id="cite_ref-1">著作権法 第二十条</span><sup>[1](#cite_note-1)</sup>
+※<span id="cite_ref-1">日本の著作権法 第二十条</span><sup>[1](#cite_note-1)</sup>の「改変」に相当する可能性があるため、<br>
+右図のバウンディングボックスのオーバーレイ表示は行わないようにしています。
 
 <!-- ![21](https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif)![22](https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif) -->
 </div>
