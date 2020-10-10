@@ -26,12 +26,12 @@ Deep写輪眼(Sharingan)：Development of NARUTO's Hand Sign Recognition System 
 # Abstract
 This repository publishes trained models and sample programs for recognizing the <span id="cite_ref-2">Naruto’s</span><sup>[2](#cite_note-2)</sup> hand sign(KATAS).
 
-忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
-また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
-印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
-印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
-過去に試験的に作成していたDeep写輪眼(MobileNetV2 SSD 300x300利用)よりも精度を大幅にアップしました。<br>
-(<span id="cite_ref-3">Tensorflow2 Object Detection API</span><sup>[3](#cite_note-3)</sup>を使用)
+With the exception of some ninjutsu, the activation of 忍術(ninjutsu) requires a hand-signs.<br>
+In addition, because the characteristics of the property change appear in the hand-sign (Fire Style → Tiger's mark, Earth Style → Boar's mark, etc.)<br>
+If you can recognize the hand-sign quickly, you can gain an advantage in the battle between Shinobi.
+By using EfficientDet-D0, one of the deep learning object detection models, for hand-sign recognition,<br>
+The accuracy has been greatly improved compared to the Deep写輪眼(using MobileNet V2 SSD 300x300) that was created on a trial basis in the past.<br>
+(Use <span id="cite_ref-3">Tensorflow2 Object Detection API</span><sup>[3](#cite_note-3)</sup>)
 
 <!--# Introduction
 -->
