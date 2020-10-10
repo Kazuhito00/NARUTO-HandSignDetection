@@ -47,9 +47,9 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 # DataSet
 ### データセットについて
 データセットは非公開です（訓練済みのモデルは公開します）<br>
-※<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[1](#cite_note-1)</sup>に準拠
+※<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[3](#cite_note-3)</sup>に準拠
 
-また、自分で撮影した画像、アニメ画像の他に、[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)を利用しています。
+また、自分で撮影した画像、アニメ画像の他に、<span id="cite_ref-4">naruto-hand-sign-dataset</span><sup>[4](#cite_note-4)</sup>を利用しています。
 
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
@@ -141,7 +141,7 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
 1. [^](#cite_ref-3)<span id="cite_note-3">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
-1. ^<span id="cite_note-4">XXXX</span>
+1. [^](#cite_ref-4)<span id="cite_note-4">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
 1. ^<span id="cite_note-5">XXXX</span>
 
 # Authors
