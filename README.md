@@ -2,8 +2,8 @@
 
 ---
 # NARUTO-HandSignDetection
-物体検出を用いてNARUTOの印(子～亥、壬、合掌)を検出するモデルとサンプルプログラムです。<br>
-このリポジトリでは、Tensorflow2 Object Detection APIを使用しています。
+物体検出を用いてNARUTOの印を検出するモデルとサンプルプログラムです。<br>
+Tensorflow2 Object Detection APIを使用しています。
 <!--
 ![header](https://user-images.githubusercontent.com/37477845/95489808-4fb55c80-09d2-11eb-95f0-c3cdc6d55d83.png)
 -->
