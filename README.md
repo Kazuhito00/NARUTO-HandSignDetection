@@ -46,9 +46,11 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 
 # DataSet
 ### データセットについて
-データセットは非公開です。<br>
-※訓練済みモデルは公開<br>
+データセットは非公開です（訓練済みのモデルは公開します）<br>
 ※<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[1](#cite_note-1)</sup>に準拠
+
+また、自分で撮影した画像、アニメ画像の他に以下のデータセットを利用しています。
+* [naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)
 
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
