@@ -121,17 +121,17 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 
 #### setting
 　ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
-- labels.csv<br>
+* labels.csv<br>
 印のラベル名を保持しています。<br>
-    - A列：英語の印
-    - B列：日本語の印
+    * A列：英語の印
+    * B列：日本語の印
 * jutsu.csv<br>
 術名と必要印を保持しています。<br>
-    - A列：日本語の術種別(火遁等)
-    - B列：英語の術種別(火遁等)
-    - C列：日本語の術名
-    - D列：英語の術名
-    - E列以降：術の発動に必要な印
+    * A列：日本語の術種別(火遁等)
+    * B列：英語の術種別(火遁等)
+    * C列：日本語の術名
+    * D列：英語の術名
+    * E列以降：術の発動に必要な印
 
 #### utils
 　FPS計測用モジュール(cvfpscalc.py)と文字列描画用モジュール(cvdrawtext.py)を格納しています。<br>
@@ -146,12 +146,23 @@ python Ninjutsu_demo.py
 ```
 
 また、デモ実行時には、以下のオプションが指定可能です。
-* --device<br>カメラデバイス番号の指定 (デフォルト：0)
+* --device<br>カメラデバイス番号の指定<br>デフォルト：0
+* --file<br>動画ファイルの指定 (デフォルト：None) ※指定時はカメラデバイスより優先される
+* --fps<br>処理FPS (デフォルト：10) ※推論時間がFPSを下回る場合のみ有効
 * --width<br>カメラキャプチャ時の横幅 (デフォルト：960)
 * --height<br>カメラキャプチャ時の縦幅 (デフォルト：540)
 * --model<br>モデル読み込みパス (デフォルト：'model/EfficientDetD0/saved_model')
-* --score_th<br>物体検出閾値 (デフォルト：0.7)
-* --fps<br>処理FPS (デフォルト：10.1) ※推論時間がFPSを下回る場合のみ有効
+* --score_th<br>物体検出閾値 (デフォルト：0.75)
+* --frame_skip<br> (デフォルト：0.7)
+* --input_shape<br> (デフォルト：0.7)
+* --sign_interval<br> (デフォルト：0.7)
+* --jutsu_display_time<br> (デフォルト：0.7)
+* --use_display_score<br> (デフォルト：0.7)
+* --erase_bbox<br> (デフォルト：0.7)
+* --use_jutsu_lang_en<br> (デフォルト：0.7)
+* --chattering_check<br> (デフォルト：0.7)
+* --use_fullscreen<br> (デフォルト：0.7)
+
 
 # Application Example(応用例)
 <!--
