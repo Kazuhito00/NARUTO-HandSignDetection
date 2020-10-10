@@ -113,7 +113,8 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 　忍術判定のデモです。<br>
 　印の履歴から術データ(jutsu.csv)にマッチする術名を表示します。<br>
 　デフォルトでは「EfficientDetD0/saved_model」モデルを利用します。<br>
-　<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">
+　<img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="35%">
+　<!--<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">-->
 
 #### model
 　訓練済みモデルを格納しています。
