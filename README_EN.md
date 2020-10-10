@@ -234,11 +234,11 @@ During the model training, I referred to Mr.Karaage's <span id="cite_ref-6">expl
 Thank you very much.
 
 # References
-1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
-1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
+1. [^](#cite_ref-1)<span id="cite_note-1">Japan：[Copyright Law Article 20 "Right to maintain identity"](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
+1. [^](#cite_ref-2)<span id="cite_note-2">『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』Masashi Kishimoto/Shueisha 1999-2014</span>
 1. [^](#cite_ref-3)<span id="cite_note-3">[Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)</span>
-1. [^](#cite_ref-4)<span id="cite_note-4">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
-1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
+1. [^](#cite_ref-4)<span id="cite_note-4">Japan：[Copyright Act Article 47-7 "Transfer of reproductions made due to restrictions on reproduction rights"](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
+1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle Public dataset：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
 1. [^](#cite_ref-6)<span id="cite_note-6">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
 
 # Authors
