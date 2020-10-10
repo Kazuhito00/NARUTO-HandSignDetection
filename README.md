@@ -143,6 +143,9 @@ python Ninjutsu_demo.py
 ```
 
 また、デモ実行時には、以下のオプションが指定可能です。
+<details>
+<summary>オプション指定</summary>
+   
 * --device<br>
 カメラデバイス番号の指定<br>
 デフォルト：
@@ -222,6 +225,7 @@ python Ninjutsu_demo.py
 フルスクリーン表示を利用するか否か(試験的機能)<br>
 デフォルト：
     * Ninjutsu_demo.py：False
+</details>
 
 # Application Example(応用例)
 <!--
