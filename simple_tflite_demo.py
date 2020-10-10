@@ -25,7 +25,7 @@ def get_args():
         default='model/MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite')
     parser.add_argument("--input_shape", type=int, default=640)
     parser.add_argument("--score_th", type=float, default=0.3)
-    parser.add_argument("--skip_frame", type=int, default=0)
+    parser.add_argument("--frame_skip", type=int, default=0)
 
     args = parser.parse_args()
 
