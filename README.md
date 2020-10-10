@@ -27,7 +27,8 @@ Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Objec
 忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
-本リポジトリでは、ディープラーニングの物体検出モデルの一つEfficientDet-D0を用いて印を認識します。<br>
+印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
+過去に試験的に作成していたDeep写輪眼(2019年版v1)よりも精度を大幅にアップしました。<br>
 (Tensorflow2 Object Detection APIを使用)
 
 In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> hand sign recognition system that we have developed. <br>
