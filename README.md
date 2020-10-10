@@ -42,7 +42,7 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 # Requirements
 * Tensorflow 2.3.0 or Later
 * OpenCV 3.4.2 or Later
-* Pillow 6.1.0 or Later
+* Pillow 6.1.0 or Later (Ninjutsu_demo.pyを動かす場合のみ)
 
 # DataSet
 ### データセットについて
@@ -100,19 +100,36 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 └─utils
 </pre>
 #### simple_demo.py
+　シンプルな検出デモです。<br>
+　デフォルトでは「EfficientDetD0/saved_model」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647513-06b4f380-0b0b-11eb-8caf-5cb092ccdb66.jpg" width="35%">
 
 #### simple_tflite_demo.py
+　tfliteファイルを用いたシンプルな検出デモです。<br>
+　デフォルトでは「MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="35%">
 
 #### Ninjutsu_demo.py
+　忍術判定のデモです。印の履歴から術データ(jutsu.csv)にマッチする術名を表示します。<br>
+　デフォルトでは「EfficientDetD0/saved_model」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">
 
 #### model
-あああ
+訓練済みモデルを格納しています。
 
 #### setting
-あああ
+ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
+- labels.csv<br>
+印のラベル名を保持しています。<br>
+    - A列：英語の印
+    - B列：日本語の印
+* jutsu.csv<br>
+術名と必要印を保持しています。<br>
+    - A列：日本語の術種別(火遁等)
+    - B列：英語の術種別(火遁等)
+    - C列：日本語の術名
+    - D列：英語の術名
+    - E列以降：術の発動に必要な印
 
 #### utils
 あああ
