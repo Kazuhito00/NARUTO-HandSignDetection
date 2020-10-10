@@ -10,7 +10,8 @@
 
 <img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="45%">　<img src="https://user-images.githubusercontent.com/37477845/95645297-97360880-0af8-11eb-9134-d92cbfb5fe42.gif" width="40%"><!--　<img src="https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif" width="45%">--><br>
 
-右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作、集英社、studioぴえろ
+右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作/集英社/studioぴえろ<br>
+※<span id="cite_ref-1">著作権法 第二十条</span><sup>[1](#cite_note-1)</sup>
 
 <!-- ![21](https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif)![22](https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif) -->
 </div>
@@ -25,7 +26,7 @@ Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印
 Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
-このリポジトリは、<span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
+このリポジトリは、<span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
 忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
@@ -33,7 +34,7 @@ Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Objec
 過去に試験的に作成していたDeep写輪眼(2019年版v1)よりも精度を大幅にアップしました。<br>
 (Tensorflow2 Object Detection APIを使用)
 
-In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> hand sign recognition system that we have developed. <br>
+In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> hand sign recognition system that we have developed. <br>
 
 <!--# Introduction
 -->
@@ -84,8 +85,8 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 # Acknowledgements(謝辞)
 
 # References
-1. [^](#cite_ref-1)<span id="cite_note-1">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
-1. ^<span id="cite_note-2">XXXX</span>
+1. ^<span id="cite_note-1">[日本：著作権法 第二十条](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
+1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
 1. ^<span id="cite_note-3">XXXX</span>
 1. ^<span id="cite_note-4">XXXX</span>
 1. ^<span id="cite_note-5">XXXX</span>
