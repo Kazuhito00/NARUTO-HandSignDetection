@@ -11,7 +11,7 @@
 <img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="45%">　<img src="https://user-images.githubusercontent.com/37477845/95645297-97360880-0af8-11eb-9134-d92cbfb5fe42.gif" width="40%"><!--　<img src="https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif" width="45%">--><br>
 
 右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作/集英社/studioぴえろ<br>
-※<span id="cite_ref-1">日本の著作権法 第二十条 同一性保持権</span><sup>[1](#cite_note-1)</sup>における「改変」に相当する可能性があるため、<br>
+※<span id="cite_ref-1">日本の著作権法 第二十条「同一性保持権」</span><sup>[1](#cite_note-1)</sup>における「改変」に相当する可能性があるため、<br>
 　右図のバウンディングボックスのオーバーレイ表示は行わないようにしています。
 
 <!-- ![21](https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif)![22](https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif) -->
@@ -45,6 +45,9 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 * Pillow 6.1.0 or Later
 
 # DataSet
+### データセットの公開可否
+<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[1](#cite_note-1)</sup>
+
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
 |子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|卯(U/Hare)| 
@@ -64,6 +67,9 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 |<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|
 
 ### データセットの枚数
+総枚数：6377(内アニメ画像：2651枚)<br>
+タグ付き枚数：4903<br>
+タグ無し枚数：1474<br>
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
 
@@ -86,9 +92,9 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 # Acknowledgements(謝辞)
 
 # References
-1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条 同一性保持権](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
+1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
-1. ^<span id="cite_note-3">XXXX</span>
+1. [^](#cite_ref-3)<span id="cite_note-3">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
 1. ^<span id="cite_note-4">XXXX</span>
 1. ^<span id="cite_note-5">XXXX</span>
 
