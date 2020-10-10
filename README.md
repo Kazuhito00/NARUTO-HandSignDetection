@@ -2,8 +2,7 @@
 
 ---
 # NARUTO-HandSignDetection
-物体検出を用いてNARUTOの印を検出するモデルとサンプルプログラムです。<br>
-Tensorflow2 Object Detection APIを使用しています。
+物体検出を用いてNARUTOの印を検出するモデルとサンプルプログラムです。
 <!--
 ![header](https://user-images.githubusercontent.com/37477845/95489808-4fb55c80-09d2-11eb-95f0-c3cdc6d55d83.png)
 -->
@@ -28,7 +27,8 @@ Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Objec
 忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
-本リポジトリでは、ディープラーニングの物体検出モデルの一つEfficientDet-D0を用いて印を認識します。
+本リポジトリでは、ディープラーニングの物体検出モデルの一つEfficientDet-D0を用いて印を認識します。<br>
+(Tensorflow2 Object Detection APIを使用)
 
 In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1](#cite_note-1)</sup> hand sign recognition system that we have developed. <br>
 
