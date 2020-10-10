@@ -100,13 +100,13 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 └─utils
 </pre>
 #### simple_demo.py
-<img src="https://user-images.githubusercontent.com/37477845/95647513-06b4f380-0b0b-11eb-8caf-5cb092ccdb66.jpg" width="50%">
+　<img src="https://user-images.githubusercontent.com/37477845/95647513-06b4f380-0b0b-11eb-8caf-5cb092ccdb66.jpg" width="35%">
 
 #### simple_tflite_demo.py
-<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="50%">
+　<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="35%">
 
 #### Ninjutsu_demo.py
-<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="50%">
+　<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">
 
 #### model
 あああ
