@@ -116,10 +116,10 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 　<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">
 
 #### model
-訓練済みモデルを格納しています。
+　訓練済みモデルを格納しています。
 
 #### setting
-ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
+　ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
 - labels.csv<br>
 印のラベル名を保持しています。<br>
     - A列：英語の印
@@ -133,7 +133,8 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
     - E列以降：術の発動に必要な印
 
 #### utils
-あああ
+FPS計測用モジュール(cvfpscalc.py)と文字列描画用モジュール(cvdrawtext.py)を格納しています。<br>
+Ninjutsu_demo.pyのみで使用します。
 
 </details>
 
