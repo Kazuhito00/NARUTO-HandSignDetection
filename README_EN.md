@@ -47,8 +47,8 @@ The dataset is private(trained models are public)<br>
 
 In addition to the images I took and the anime images, I use <span id="cite_ref-5">naruto-hand-sign-dataset</span><sup>[5](#cite_note-5)</sup>.
 
-### 印の種類
-14種類(子～亥、壬、合掌)の印に対応しています。<br>
+### Kind of hand-sign
+It corresponds to 14 kinds of hand-signs(Rat-Boar, Mizunoe, Hand Claps).<br>
 |子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|卯(U/Hare)| 
 |:---:|:---:|:---:|:---:| 
 |<img src="https://user-images.githubusercontent.com/37477845/95611897-6d032d00-0a9d-11eb-86c4-de1c50c0d7b6.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611906-6ffe1d80-0a9d-11eb-9054-4e68c42e52ca.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611912-712f4a80-0a9d-11eb-8cb8-fc7097e16f60.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611915-72607780-0a9d-11eb-9995-66524ce4f978.jpg" width="100%">| 
