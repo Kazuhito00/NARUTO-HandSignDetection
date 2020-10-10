@@ -23,7 +23,7 @@
 ---
 
 # Title
-Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識システムの開発<br>
+Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識<br>
 
 # Abstract
 このリポジトリは、<span id="cite_ref-2">NARUTO</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
