@@ -136,12 +136,6 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 　FPS計測用モジュール(cvfpscalc.py)と文字列描画用モジュール(cvdrawtext.py)を格納しています。<br>
 　Ninjutsu_demo.pyのみで使用します。
 
-# Results
-
-<!-- # Discussion(考察)
--->
-<!-- # Conclusions(結論)
--->
 # Usage
 
 # Application Example(応用例)
@@ -159,7 +153,6 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
 1. [^](#cite_ref-3)<span id="cite_note-3">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
 1. [^](#cite_ref-4)<span id="cite_note-4">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
-1. ^<span id="cite_note-5">XXXX</span>
 
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
