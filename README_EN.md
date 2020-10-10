@@ -198,40 +198,40 @@ The hand-sign history is cleared when the specified time(seconds) has passed sin
 Default：
     * Ninjutsu_demo.py：2.0
 * --jutsu_display_time<br>
-術成立時に術名を表示する時間(秒)<br>
+Time to display the Ninjutsu name when the hand-sign procedure is completed(seconds)<br>
 Default：
     * Ninjutsu_demo.py：5
 * --use_display_score<br>
-印検出スコアを表示するか否か<br>
+Whether to display the hand-sign detection score<br>
 Default：
     * Ninjutsu_demo.py：False
 * --erase_bbox<br>
-バウンディングボックスのオーバーレイ表示を消去するか否か<br>
+Whether to clear the bounding box overlay display<br>
 Default：
     * Ninjutsu_demo.py：False
 * --use_jutsu_lang_en<br>
-術名表示に英語表記を使用するか否か<br>
+Whether to use English notation for displaying the Ninjutsu name<br>
 Default：
     * Ninjutsu_demo.py：False
 * --chattering_check<br>
-印を何回連続で検出したら印の成立とみなすか(印の検出チラつき対策)<br>
+Continuous detection is regarded as hand-sign detection<br>
 Default：
     * Ninjutsu_demo.py：1
 * --use_fullscreen<br>
-フルスクリーン表示を利用するか否か(試験的機能)<br>
+Whether to use full screen display(experimental function)<br>
 Default：
     * Ninjutsu_demo.py：False
 </details>
 
 # Application Example
-アプリケーションの応用例です。
-|忍認証システム|忍者アカデミー試験対策|Deep写輪眼スマートグラス|
+This is an application example.
+|Shinobi authentication system|Ninja Academy Exam|Deep写輪眼Smart glass|
 |:---:|:---:|:---:|
 |<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650659-d9267500-0b1f-11eb-90d7-d82cdb2c2824.png" width="100%">|
 
 # Acknowledgements
-モデルトレーニング時は、からげさんの<span id="cite_ref-6">説明記事</span><sup>[6](#cite_note-6)</sup>を参考にいたしました。<br>
-大変ありがとうございます。
+During the model training, I referred to Mr.Karaage's <span id="cite_ref-6">explanation article</span><sup>[6](#cite_note-6)</sup>. <br>
+Thank you very much.
 
 # References
 1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
@@ -242,7 +242,7 @@ Default：
 1. [^](#cite_ref-6)<span id="cite_note-6">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
 
 # Authors
-高橋かずひと(https://twitter.com/KzhtTkhs)
+Kazuhito Takahashi(https://twitter.com/KzhtTkhs)
 <!--
 # Affiliations(所属)
 -->
@@ -251,4 +251,4 @@ Default：
 NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 # License(Font)
-衡山毛筆フォント(https://opentype.jp/kouzanmouhitufont.htm)
+KouzanMouhitsu(衡山毛筆) Font(https://opentype.jp/kouzanmouhitufont.htm)
