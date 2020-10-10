@@ -41,7 +41,8 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 * Pillow 6.1.0 or Later
 
 # DataSet
-以下の14種類(子～亥、壬、合掌)の印に対応しています。<br>
+### 印の種類
+14種類(子～亥、壬、合掌)の印に対応しています。<br>
 |子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|卯(U/Hare)| 
 |:---:|:---:|:---:|:---:| 
 |<img src="https://user-images.githubusercontent.com/37477845/95611897-6d032d00-0a9d-11eb-86c4-de1c50c0d7b6.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611906-6ffe1d80-0a9d-11eb-9054-4e68c42e52ca.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611912-712f4a80-0a9d-11eb-8cb8-fc7097e16f60.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611915-72607780-0a9d-11eb-9995-66524ce4f978.jpg" width="100%">| 
@@ -58,7 +59,7 @@ In this repository, we discuss the <span id="cite_ref-1">NARUTO's</span><sup>[1]
 |:---:|:---:|:---:|:---:|
 |<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|
 
-
+### データセットの枚数
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
 
