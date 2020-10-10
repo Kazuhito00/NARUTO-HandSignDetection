@@ -45,8 +45,10 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 * Pillow 6.1.0 or Later
 
 # DataSet
-### データセットの公開可否
-<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[1](#cite_note-1)</sup>
+### データセットについて
+データセットは非公開です。<br>
+※訓練済みモデルは公開<br>
+※<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[1](#cite_note-1)</sup>に準拠
 
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
