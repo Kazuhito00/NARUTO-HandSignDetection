@@ -230,7 +230,7 @@ python Ninjutsu_demo.py
 # Application Example(応用例)
 |子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|
 |:---:|:---:|:---:|
-|<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650559-4ede1100-0b1f-11eb-8532-488492181687.png" width="100%">|
+|<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650659-d9267500-0b1f-11eb-90d7-d82cdb2c2824.png" width="100%">|
 
 
 # Acknowledgements(謝辞)
