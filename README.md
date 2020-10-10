@@ -232,8 +232,9 @@ python Ninjutsu_demo.py
 |:---:|:---:|:---:|
 |<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650659-d9267500-0b1f-11eb-90d7-d82cdb2c2824.png" width="100%">|
 
-
-# Acknowledgements(謝辞)
+# Acknowledgements
+モデルトレーニング時は、からげさんの<span id="cite_ref-6">説明記事</span><sup>[6](#cite_note-6)</sup>を参考にいたしました。<br>
+大変ありがとうございます。
 
 # References
 1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
@@ -241,6 +242,7 @@ python Ninjutsu_demo.py
 1. [^](#cite_ref-3)<span id="cite_note-3">[Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)</span>
 1. [^](#cite_ref-4)<span id="cite_note-4">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
 1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
+1. [^](#cite_ref-6)<span id="cite_note-6">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
 
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
