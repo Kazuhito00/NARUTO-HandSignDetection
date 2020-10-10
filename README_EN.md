@@ -67,8 +67,8 @@ It corresponds to 14 kinds of hand-signs(Rat-Boar, Mizunoe, Hand Claps).<br>
 
 ### Number of datasets
 Total number：6377 sheets(Anime image：2651sheets)<br>
-Number of tagged sheets：49032651sheets<br>
-Number of untagged sheets：14742651sheets<br>
+Number of tagged sheets：4903sheets<br>
+Number of untagged sheets：1474sheets<br>
 Number of annotation boxes：6037 boxes<br>
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
