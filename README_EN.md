@@ -143,83 +143,83 @@ In addition, the following options can be specified when running the demo.
 <summary>Option specification</summary>
    
 * --device<br>
-カメラデバイス番号の指定<br>
-デフォルト：
+Camera device number<br>
+Default：
     * simple_demo.py：0
     * simple_tflite_demo.py：0
     * Ninjutsu_demo.py：0
 * --file<br>
-動画ファイル名の指定 ※指定時はカメラデバイスより優先し動画を読み込む<br>
-デフォルト：
+Video file name ※If specified, the video will be loaded in preference to the camera<br>
+Default：
     * simple_demo.py：None
     * simple_tflite_demo.py：None
     * Ninjutsu_demo.py：None
 * --fps<br>
-処理FPS ※推論時間がFPSを下回る場合のみ有効<br>
-デフォルト：
+Processing FPS ※Valid only if the inference time is less than FPS<br>
+Default：
     * simple_demo.py：10
     * simple_tflite_demo.py：10
     * Ninjutsu_demo.py：10
 * --width<br>
-カメラキャプチャ時の横幅<br>
-デフォルト：
+Width when shooting with a camera<br>
+Default：
     * simple_demo.py：960
     * simple_tflite_demo.py：960
     * Ninjutsu_demo.py：960
 * --height<br>
-カメラキャプチャ時の縦幅<br>
-デフォルト：
+Height when shooting with a camera<br>
+Default：
     * simple_demo.py：540
     * simple_tflite_demo.py：540
     * Ninjutsu_demo.py：540
 * --model<br>
-モデル読み込みパス<br>
-デフォルト：
+Model loading path<br>
+Default：
     * simple_demo.py：'model/EfficientDetD0/saved_model'
     * simple_tflite_demo.py：'model/MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite'
     * Ninjutsu_demo.py：'model/EfficientDetD0/saved_model'
 * --score_th<br>
-物体検出閾値<br>
-デフォルト：
+Object detection threshold<br>
+Default：
     * simple_demo.py：0.75
     * simple_tflite_demo.py：0.3
     * Ninjutsu_demo.py：0.75
 * --skip_frame<br>
-カメラ or 動画読み込み時に何枚おきに処理を実行するか<br>
-デフォルト：
+Whether to thin out when loading the camera or video<br>
+Default：
     * simple_demo.py：0
     * simple_tflite_demo.py：0
     * Ninjutsu_demo.py：0
 * --input_shape<br>
-モデルへインプットする画像の一辺の長さ<br>
+The length of one side of the image to be input to the model<br>
     * simple_tflite_demo.py：640
 * --sign_interval<br>
-前回の印検出時から指定時間(秒)経過すると印の履歴をクリア<br>
-デフォルト：
+The hand-sign history is cleared when the specified time(seconds) has passed since the last mark was detected.<br>
+Default：
     * Ninjutsu_demo.py：2.0
 * --jutsu_display_time<br>
 術成立時に術名を表示する時間(秒)<br>
-デフォルト：
+Default：
     * Ninjutsu_demo.py：5
 * --use_display_score<br>
 印検出スコアを表示するか否か<br>
-デフォルト：
+Default：
     * Ninjutsu_demo.py：False
 * --erase_bbox<br>
 バウンディングボックスのオーバーレイ表示を消去するか否か<br>
-デフォルト：
+Default：
     * Ninjutsu_demo.py：False
 * --use_jutsu_lang_en<br>
 術名表示に英語表記を使用するか否か<br>
-デフォルト：
+Default：
     * Ninjutsu_demo.py：False
 * --chattering_check<br>
 印を何回連続で検出したら印の成立とみなすか(印の検出チラつき対策)<br>
-デフォルト：
+Default：
     * Ninjutsu_demo.py：1
 * --use_fullscreen<br>
 フルスクリーン表示を利用するか否か(試験的機能)<br>
-デフォルト：
+Default：
     * Ninjutsu_demo.py：False
 </details>
 
