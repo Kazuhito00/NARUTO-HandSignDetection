@@ -11,7 +11,7 @@
 <img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="45%">　<img src="https://user-images.githubusercontent.com/37477845/95645297-97360880-0af8-11eb-9134-d92cbfb5fe42.gif" width="40%"><!--　<img src="https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif" width="45%">--><br>
 
 右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作/集英社/studioぴえろ<br>
-※<span id="cite_ref-1">日本の著作権法 第二十条</span><sup>[1](#cite_note-1)</sup>の「改変」に相当する可能性があるため、<br>
+※<span id="cite_ref-1">日本の著作権法 第二十条 同一性保持権</span><sup>[1](#cite_note-1)</sup>における「改変」に相当する可能性があるため、<br>
 　右図のバウンディングボックスのオーバーレイ表示は行わないようにしています。
 
 <!-- ![21](https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif)![22](https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif) -->
@@ -86,7 +86,7 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 # Acknowledgements(謝辞)
 
 # References
-1. [^](#cite_ref-1)<span id="cite_note-1">[日本：著作権法 第二十条](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
+1. [^](#cite_ref-1)<span id="cite_note-1">[日本：著作権法 第二十条 同一性保持権](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
 1. ^<span id="cite_note-3">XXXX</span>
 1. ^<span id="cite_note-4">XXXX</span>
