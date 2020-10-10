@@ -1,18 +1,16 @@
-[Japanese/English]
+[[Japanese](https://github.com/Kazuhito00/NARUTO-HandSignDetection)/English]
 
 ---
 # NARUTO-HandSignDetection
-物体検出を用いてNARUTOの印を検出するモデルとサンプルプログラムです。
+This is a model and sample program that detects the Naruto' hand sign using object detection.
 <!--
 ![header](https://user-images.githubusercontent.com/37477845/95489808-4fb55c80-09d2-11eb-95f0-c3cdc6d55d83.png)
 -->
 <div align="left">
 
 <img src="https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif" width="45%">　<img src="https://user-images.githubusercontent.com/37477845/95645297-97360880-0af8-11eb-9134-d92cbfb5fe42.gif" width="40%"><!--　<img src="https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif" width="45%">--><br>
-
-右図：© NARUTO -ナルト- 9話『写輪眼のカカシ』岸本斉史作/集英社/studioぴえろ<br>
-※<span id="cite_ref-1">日本の著作権法 第二十条「同一性保持権」</span><sup>[1](#cite_note-1)</sup>における「改変」に相当する可能性があるため、<br>
-　右図にはバウンディングボックスのオーバーレイ表示は行っておりません。
+Right figure：© NARUTO Episode 9 『Kakashi, Sharingan Warrior!』Masashi Kishimoto/Shueisha/Studio Pierrot<br>
+※The bounding box is not overlaid in the figure on the right because it may correspond to "modification" in <span id="cite_ref-1">Article 20 "Identity Preservation Right" of the Japanese Copyright Law</span><sup>[1](#cite_note-1)</sup>.
 
 <!-- ![21](https://user-images.githubusercontent.com/37477845/95489944-78d5ed00-09d2-11eb-96f6-a687b012c413.gif)![22](https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif) -->
 </div>
@@ -23,7 +21,6 @@
 ---
 
 # Title
-Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識システムの開発<br>
 Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
