@@ -110,7 +110,8 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 　<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="35%">
 
 #### Ninjutsu_demo.py
-　忍術判定のデモです。印の履歴から術データ(jutsu.csv)にマッチする術名を表示します。<br>
+　忍術判定のデモです。<br>
+　印の履歴から術データ(jutsu.csv)にマッチする術名を表示します。<br>
 　デフォルトでは「EfficientDetD0/saved_model」モデルを利用します。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">
 
