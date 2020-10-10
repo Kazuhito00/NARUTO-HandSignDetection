@@ -133,10 +133,8 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
     - E列以降：術の発動に必要な印
 
 #### utils
-FPS計測用モジュール(cvfpscalc.py)と文字列描画用モジュール(cvdrawtext.py)を格納しています。<br>
-Ninjutsu_demo.pyのみで使用します。
-
-</details>
+　FPS計測用モジュール(cvfpscalc.py)と文字列描画用モジュール(cvdrawtext.py)を格納しています。<br>
+　Ninjutsu_demo.pyのみで使用します。
 
 # Results
 
