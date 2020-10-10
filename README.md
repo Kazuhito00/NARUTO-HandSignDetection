@@ -146,13 +146,41 @@ python Ninjutsu_demo.py
 ```
 
 また、デモ実行時には、以下のオプションが指定可能です。
-* --device<br>カメラデバイス番号の指定<br>デフォルト：0
-* --file<br>動画ファイルの指定 (デフォルト：None) ※指定時はカメラデバイスより優先される
-* --fps<br>処理FPS (デフォルト：10) ※推論時間がFPSを下回る場合のみ有効
-* --width<br>カメラキャプチャ時の横幅 (デフォルト：960)
-* --height<br>カメラキャプチャ時の縦幅 (デフォルト：540)
-* --model<br>モデル読み込みパス (デフォルト：'model/EfficientDetD0/saved_model')
-* --score_th<br>物体検出閾値 (デフォルト：0.75)
+* --device<br>カメラデバイス番号の指定<br>
+デフォルト：
+    * simple_demo.py：0
+    * simple_tflite_demo.py：0
+    * Ninjutsu_demo.py：0
+* --file<br>動画ファイル名の指定 ※指定時はカメラデバイスより優先し動画を読み込む<br>
+デフォルト：
+    * simple_demo.py：None
+    * simple_tflite_demo.py：None
+    * Ninjutsu_demo.py：None
+* --fps<br>処理FPS ※推論時間がFPSを下回る場合のみ有効<br>
+デフォルト：
+    * simple_demo.py：10
+    * simple_tflite_demo.py：10
+    * Ninjutsu_demo.py：10
+* --width<br>カメラキャプチャ時の横幅<br>
+デフォルト：
+    * simple_demo.py：960
+    * simple_tflite_demo.py：960
+    * Ninjutsu_demo.py：960
+* --height<br>カメラキャプチャ時の縦幅<br>
+デフォルト：
+    * simple_demo.py：540
+    * simple_tflite_demo.py：540
+    * Ninjutsu_demo.py：540
+* --model<br>モデル読み込みパス<br>
+デフォルト：
+    * simple_demo.py：'model/EfficientDetD0/saved_model'
+    * simple_tflite_demo.py：'model/MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite'
+    * Ninjutsu_demo.py：'model/EfficientDetD0/saved_model'
+* --score_th<br>物体検出閾値<br>
+デフォルト：
+    * simple_demo.py：0.75
+    * simple_tflite_demo.py：0.3
+    * Ninjutsu_demo.py：0.75
 * --frame_skip<br> (デフォルト：0.7)
 * --input_shape<br> (デフォルト：0.7)
 * --sign_interval<br> (デフォルト：0.7)
