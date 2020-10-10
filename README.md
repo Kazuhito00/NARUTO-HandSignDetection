@@ -24,7 +24,6 @@
 
 # Title
 Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識システムの開発<br>
-Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
 このリポジトリは、<span id="cite_ref-2">NARUTO</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
@@ -34,8 +33,6 @@ Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Objec
 印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
 過去に試験的に作成していたDeep写輪眼(MobileNetV2 SSD 300x300利用)よりも精度を大幅にアップしました。<br>
 (<span id="cite_ref-3">Tensorflow2 Object Detection API</span><sup>[3](#cite_note-3)</sup>を使用)
-
-In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> hand sign recognition system that we have developed. <br>
 
 <!--# Introduction
 -->
