@@ -24,7 +24,7 @@ Right figure：© NARUTO Episode 9 『Kakashi, Sharingan Warrior!』Masashi Kish
 Deep写輪眼(Sharingan)：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
-This repository publishes trained models and sample programs for recognizing the <span id="cite_ref-2">Naruto’s</span><sup>[2](#cite_note-2)</sup> hand sign(KATAS).
+This repository publishes trained models and sample programs for recognizing the <span id="cite_ref-2">Naruto’s</span><sup>[2](#cite_note-2)</sup> hand sign.
 
 With the exception of some ninjutsu, the activation of 忍術(ninjutsu) requires a hand-signs.<br>
 In addition, because the characteristics of the property change appear in the hand-sign (Fire Style → Tiger's mark, Earth Style → Boar's mark, etc.)<br>
