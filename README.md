@@ -33,7 +33,7 @@ Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Objec
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
 印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
 過去に試験的に作成していたDeep写輪眼(MobileNetV2 SSD 300x300利用)よりも精度を大幅にアップしました。<br>
-(Tensorflow2 Object Detection APIを使用)
+(<span id="cite_ref-3">Tensorflow2 Object Detection API</span><sup>[3](#cite_note-3)</sup>を使用)
 
 In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> hand sign recognition system that we have developed. <br>
 
@@ -47,9 +47,9 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 # DataSet
 ### データセットについて
 データセットは非公開です（訓練済みのモデルは公開します）<br>
-※<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[3](#cite_note-3)</sup>に準拠
+※<span id="cite_ref-4">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[4](#cite_note-4)</sup>に準拠
 
-また、自分で撮影した画像、アニメ画像の他に、<span id="cite_ref-4">naruto-hand-sign-dataset</span><sup>[4](#cite_note-4)</sup>を利用しています。
+また、自分で撮影した画像、アニメ画像の他に、<span id="cite_ref-5">naruto-hand-sign-dataset</span><sup>[5](#cite_note-5)</sup>を利用しています。
 
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
@@ -240,8 +240,9 @@ python Ninjutsu_demo.py
 # References
 1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
-1. [^](#cite_ref-3)<span id="cite_note-3">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
-1. [^](#cite_ref-4)<span id="cite_note-4">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
+1. [^](#cite_ref-3)<span id="cite_note-3">[Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)</span>
+1. [^](#cite_ref-4)<span id="cite_note-4">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
+1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
 
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
