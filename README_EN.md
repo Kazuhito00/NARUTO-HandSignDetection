@@ -65,18 +65,18 @@ It corresponds to 14 kinds of hand-signs(Rat-Boar, Mizunoe, Hand Claps).<br>
 |:---:|:---:|:---:|:---:|
 |<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|
 
-### データセットの枚数
-総枚数：6377枚(内アニメ画像：2651枚)<br>
-タグ付き枚数：4903枚<br>
-タグ無し枚数：1474枚<br>
-アノテーションボックス数：6037個<br>
+### Number of datasets
+Total number：6377 sheets(Anime image：2651sheets)<br>
+Number of tagged sheets：4903枚<br>
+Number of untagged sheets：1474枚<br>
+Number of annotation boxes：6037 boxes<br>
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
 # Trained Model
-訓練済みモデルをmodelディレクトリ配下で公開しています。
+The trained model is published under the 'model' directory.
 * EfficientDet D0
 * MobileNetV2 SSD FPNLite 640x640
-* MobileNetV2 SSD FPNLite 640x640(TensorFlow Liteモデル)
+* MobileNetV2 SSD FPNLite 640x640(TensorFlow Lite model)
 * MobileNetV2 SSD 300x300
 
 # Directory
@@ -96,51 +96,51 @@ It corresponds to 14 kinds of hand-signs(Rat-Boar, Mizunoe, Hand Claps).<br>
 └─utils
 </pre>
 #### simple_demo.py
-　シンプルな検出デモです。<br>
+　A simple detection demo.<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647513-06b4f380-0b0b-11eb-8caf-5cb092ccdb66.jpg" width="35%">
 
 #### simple_tflite_demo.py
-　tfliteファイルを用いたシンプルな検出デモです。<br>
+　A simple detection demo using a tflite file.<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="35%">
 
 #### Ninjutsu_demo.py
-　忍術判定のデモです。<br>
-　印の履歴から術データ(jutsu.csv)にマッチする術名を表示します。<br>
+　This is a demonstration of the establishment of Ninjutsu.<br>
+　The Ninjutsu name that matches the Ninjutsu-data(jutsu.csv) from the history of the hand-sign is displayed.<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95490010-93a86180-09d2-11eb-8185-e50fd2b5c137.gif" width="35%">
 　<!--<img src="https://user-images.githubusercontent.com/37477845/95647523-13394c00-0b0b-11eb-935b-a5a94e2f523d.jpg" width="35%">-->
 
 #### model
-　訓練済みモデルを格納しています。
+　Contains trained models.
 
 #### setting
-　ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
+　Contains label data(labels.csv) and Ninjutsu name data(jutsu.csv).
 * labels.csv<br>
-印のラベル名を保持しています。<br>
-    * A列：英語の印
-    * B列：日本語の印
+The label name of the hand-sign is listed<br>
+    * Column A：English hand-sign name
+    * Column B：Japanese hand-sign name
 * jutsu.csv<br>
-術名と必要印を保持しています。<br>
-    * A列：日本語の術種別(火遁等)
-    * B列：英語の術種別(火遁等)
-    * C列：日本語の術名
-    * D列：英語の術名
-    * E列以降：術の発動に必要な印
+The name of the Ninjutsu name and the required hand-sign are listed.<br>
+    * Column A：Japanese technique type name(Fire Style, etc)
+    * Column B：English technique type name(Fire Style, etc)
+    * Column C：Japanese Ninjutsu name
+    * Column D：English Ninjutsu name
+    * After column E：Hand-signs required to activate ninjutsu
 
 #### utils
-　FPS計測用モジュール(cvfpscalc.py)と文字列描画用モジュール(cvdrawtext.py)を格納しています。<br>
-　Ninjutsu_demo.pyのみで使用します。
+ Contains the FPS measurement module(cvfpscalc.py) and the character string drawing module(cvdrawtext.py). <br>
+ Used only in Ninjutsu_demo.py.
 
 # Usage
-デモの実行方法は以下です。
+Here's how to run the demo.
 ```bash
 python simple_demo.py
 python simple_tflite_demo.py
 python Ninjutsu_demo.py
 ```
 
-また、デモ実行時には、以下のオプションが指定可能です。
+In addition, the following options can be specified when running the demo.
 <details>
-<summary>オプション指定</summary>
+<summary>Option specification</summary>
    
 * --device<br>
 カメラデバイス番号の指定<br>
