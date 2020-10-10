@@ -27,7 +27,7 @@ Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印
 Deep写輪眼：Development of NARUTO's Hand Sign Recognition System using Object Detection EfficientDet
 
 # Abstract
-このリポジトリは、<span id="cite_ref-2">NARUTO's</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
+このリポジトリは、<span id="cite_ref-2">NARUTO</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
 忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
@@ -70,11 +70,13 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 |<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|
 
 ### データセットの枚数
-総枚数：6377(内アニメ画像：2651枚)<br>
-タグ付き枚数：4903<br>
-タグ無し枚数：1474<br>
+総枚数：6377枚(内アニメ画像：2651枚)<br>
+タグ付き枚数：4903枚<br>
+タグ無し枚数：1474枚<br>
+アノテーションボックス数：6037個<br>
 <img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
+# Trained Model
 
 # Results
 
@@ -84,7 +86,7 @@ In this repository, we discuss the <span id="cite_ref-2">NARUTO's</span><sup>[2]
 -->
 # Usage
 
-# Application example(応用例)
+# Application Example(応用例)
 <!--
 * スマートグラス
 * 認証 「****」開錠
