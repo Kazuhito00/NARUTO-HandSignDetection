@@ -68,7 +68,7 @@ def main():
     inference_func = loaded_model.signatures[DEFAULT_FUNCTION_KEY]
 
     # ラベル読み込み ###########################################################
-    with open('setting/labels.csv') as f:
+    with open('setting/labels.csv', encoding='utf8') as f:
         labels = csv.reader(f)
         labels = [row for row in labels]
 

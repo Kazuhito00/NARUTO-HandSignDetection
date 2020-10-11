@@ -87,7 +87,7 @@ def main():
     interpreter.allocate_tensors()
 
     # ラベル読み込み ###########################################################
-    with open('setting/labels.csv') as f:
+    with open('setting/labels.csv', encoding='utf8') as f:
         labels = csv.reader(f)
         labels = [row for row in labels]
 

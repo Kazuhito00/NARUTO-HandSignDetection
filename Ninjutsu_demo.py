@@ -101,11 +101,11 @@ def main():
     font_path = './utils/font/衡山毛筆フォント.ttf'
 
     # ラベル読み込み ###########################################################
-    with open('setting/labels.csv') as f:  # 印
+    with open('setting/labels.csv', encoding='utf8') as f:  # 印
         labels = csv.reader(f)
         labels = [row for row in labels]
 
-    with open('setting/jutsu.csv') as f:  # 術
+    with open('setting/jutsu.csv', encoding='utf8') as f:  # 術
         jutsu = csv.reader(f)
         jutsu = [row for row in jutsu]
 
