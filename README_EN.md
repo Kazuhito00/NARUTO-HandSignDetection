@@ -114,6 +114,7 @@ The trained model is published under the 'model' directory.
 
 #### setting
 　Contains label data(labels.csv) and Ninjutsu name data(jutsu.csv).
+　Since the character code is UTF-8, please be careful when opening it with Excel.
 * labels.csv<br>
 The label name of the hand-sign is listed<br>
     * Column A：English hand-sign name
