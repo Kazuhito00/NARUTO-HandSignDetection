@@ -115,6 +115,7 @@ Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印
 
 #### setting
 　ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
+　文字コードはUTF-8のため、エクセル等で開くときは注意ください。
 * labels.csv<br>
 印のラベル名を保持しています。<br>
     * A列：英語の印
