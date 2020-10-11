@@ -115,6 +115,7 @@ Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印
 
 #### setting
 　ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
+　文字コードはUTF-8のため、エクセル等で開くときは注意ください。
 * labels.csv<br>
 印のラベル名を保持しています。<br>
     * A列：英語の印
@@ -231,7 +232,7 @@ python Ninjutsu_demo.py
 |<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650659-d9267500-0b1f-11eb-90d7-d82cdb2c2824.png" width="100%">|
 
 # Acknowledgements
-モデルトレーニング時は、からげさんの<span id="cite_ref-6">説明記事</span><sup>[6](#cite_note-6)</sup>を参考にいたしました。<br>
+モデルトレーニング時は、からあげさんの<span id="cite_ref-6">説明記事</span><sup>[6](#cite_note-6)</sup>を参考にいたしました。<br>
 大変ありがとうございます。
 
 # References
