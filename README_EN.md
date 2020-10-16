@@ -47,6 +47,13 @@ The dataset is private(trained models are public)<br>
 
 In addition to the images I took and the anime images, I use <span id="cite_ref-5">naruto-hand-sign-dataset</span><sup>[5](#cite_note-5)</sup>.
 
+### Request
+Since the dataset consists of images collected on the Internet and images taken by ourselves, <br>
+Depending on the background color and clothing, the detection accuracy may drop or false detection may occur. <br>
+It would be helpful if you could tell us the conditions that were falsely detected in the Issue. <br>
+If possible, it would be greatly appreciated if you could provide an image of the conditions for false detection(Rat-Boar, Mizunoe, Hand Claps). <br>
+At that time, the received image will be added to the training data set and used for retraining the model.
+
 ### Kind of hand-sign
 It corresponds to 14 kinds of hand-signs(Rat-Boar, Mizunoe, Hand Claps).<br>
 |子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|卯(U/Hare)| 
