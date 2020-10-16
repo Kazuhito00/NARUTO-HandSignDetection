@@ -244,7 +244,7 @@ Thank you very much.
 1. [^](#cite_ref-3)<span id="cite_note-3">[Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)</span>
 1. [^](#cite_ref-4)<span id="cite_note-4">Japan：[Copyright Act Article 47-7 "Transfer of reproductions made due to restrictions on reproduction rights"](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
 1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle Public dataset：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
-1. [^](#cite_ref-6)<span id="cite_note-6">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
+1. [^](#cite_ref-6)<span id="cite_note-6">Karaage-san's blog：[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
 1. [^](#cite_ref-7)<span id="cite_note-7">Karaage-san's blog：[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)</span>
 
 # Authors
