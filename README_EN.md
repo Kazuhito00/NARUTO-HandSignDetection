@@ -223,6 +223,10 @@ Default：
     * Ninjutsu_demo.py：False
 </details>
 
+In addition, Mr. Karaage-san's blog described a more detailed environment construction/execution method. <br>
+I hope you can refer to this as well.
+* 「[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)」</sup>
+
 # Application Example
 This is an application example.
 |Shinobi authentication system|Ninja Academy Exam|Deep写輪眼Smart glass|
@@ -231,6 +235,7 @@ This is an application example.
 
 # Acknowledgements
 During the model training, I referred to karaage-san <span id="cite_ref-6">explanation article</span><sup>[6](#cite_note-6)</sup>. <br>
+Also, Karaage-san introduced Deep写輪眼 on his <span id="cite_ref-7">blog</span><sup>[7](#cite_note-7)</sup>.<br>
 Thank you very much.
 
 # References
@@ -240,6 +245,7 @@ Thank you very much.
 1. [^](#cite_ref-4)<span id="cite_note-4">Japan：[Copyright Act Article 47-7 "Transfer of reproductions made due to restrictions on reproduction rights"](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
 1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle Public dataset：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
 1. [^](#cite_ref-6)<span id="cite_note-6">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
+1. [^](#cite_ref-7)<span id="cite_note-7">Karaage-san's blog：[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)</span>
 
 # Authors
 Kazuhito Takahashi(https://twitter.com/KzhtTkhs)
