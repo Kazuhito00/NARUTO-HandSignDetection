@@ -84,7 +84,7 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 訓練済みモデルをmodelディレクトリ配下で公開しています。
 * EfficientDet D0
 * MobileNetV2 SSD FPNLite 640x640
-* MobileNetV2 SSD FPNLite 640x640(TensorFlow Liteモデル)
+* MobileNetV2 SSD FPNLite 640x640(TensorFlow Liteモデル：Float16量子化)
 * MobileNetV2 SSD 300x300
 
 # Directory
