@@ -83,7 +83,7 @@ Number of annotation boxes：6037 boxes<br>
 The trained model is published under the 'model' directory.
 * EfficientDet D0
 * MobileNetV2 SSD FPNLite 640x640
-* MobileNetV2 SSD FPNLite 640x640(TensorFlow Lite model)
+* MobileNetV2 SSD FPNLite 640x640(TensorFlow Lite model：Float16 Quantization)
 * MobileNetV2 SSD 300x300
 
 # Directory
