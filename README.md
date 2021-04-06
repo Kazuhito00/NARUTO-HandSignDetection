@@ -236,10 +236,13 @@ python Ninjutsu_demo.py
 * 「[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)」</sup>
 
 # Application Example
-アプリケーションの応用例です。
+アプリケーションの応用事例を紹介します。
+* [第15回UE4ぷちコン「印VADERS」](https://www.youtube.com/watch?v=K4-E5SseVtI)
+<!--
 |忍認証システム|忍者アカデミー試験対策|Deep写輪眼スマートグラス|
 |:---:|:---:|:---:|
 |<img src="https://user-images.githubusercontent.com/37477845/95650546-3a9a1400-0b1f-11eb-9b80-c58256b268a3.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650553-44237c00-0b1f-11eb-8a85-7e5e72e80120.gif" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95650659-d9267500-0b1f-11eb-90d7-d82cdb2c2824.png" width="100%">|
+-->
 
 # Acknowledgements
 モデルトレーニング時は、からあげさんの<span id="cite_ref-6">説明記事</span><sup>[6](#cite_note-6)</sup>を参考にいたしました。<br>
