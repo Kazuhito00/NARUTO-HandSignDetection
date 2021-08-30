@@ -57,21 +57,71 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 
 ### 印の種類
 14種類(子～亥、壬、合掌)の印に対応しています。<br>
-|子(Ne/Rat)|丑(Ushi/Ox)|寅(Tora/Tiger)|卯(U/Hare)| 
-|:---:|:---:|:---:|:---:| 
-|<img src="https://user-images.githubusercontent.com/37477845/95611897-6d032d00-0a9d-11eb-86c4-de1c50c0d7b6.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611906-6ffe1d80-0a9d-11eb-9054-4e68c42e52ca.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611912-712f4a80-0a9d-11eb-8cb8-fc7097e16f60.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611915-72607780-0a9d-11eb-9995-66524ce4f978.jpg" width="100%">| 
 
-|辰(Tatsu/Dragon)|巳(Mi/Snake)|午(Uma/Horse)|未(Hitsuji/Ram)| 
-|:---:|:---:|:---:|:---:| 
-|<img src="https://user-images.githubusercontent.com/37477845/95611920-7391a480-0a9d-11eb-8e74-db39acf90f83.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611922-742a3b00-0a9d-11eb-8a21-8bdf207db9bb.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611928-755b6800-0a9d-11eb-86c0-67605ffd6e9b.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611930-768c9500-0a9d-11eb-81c6-067b632dc43d.jpg" width="100%">| 
-
-|申(Saru/Monkey)|酉(Tori/Bird)|戌(Inu/Dog)|亥(I/Boar)| 
-|:---:|:---:|:---:|:---:| 
-|<img src="https://user-images.githubusercontent.com/37477845/95611931-77252b80-0a9d-11eb-97d6-e3efc6f1aac3.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611935-77bdc200-0a9d-11eb-95e1-feb8bf7f61de.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611936-78eeef00-0a9d-11eb-90b3-f565e4763c50.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611938-7a201c00-0a9d-11eb-9d5f-1daf2405f20f.jpg" width="100%">| 
-
-|壬(Mizunoe)|合掌(Gassho/Hnad Claps)|-|-|
-|:---:|:---:|:---:|:---:|
-|<img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|<img src="https://user-images.githubusercontent.com/37477845/95613470-f61b6380-0a9f-11eb-8c75-e6efce443d3a.jpg" width="50%">|
+<table>
+	<tbody>
+		<tr>
+			<td width="25%">子(Ne/Rat)</td>
+			<td width="25%">丑(Ushi/Ox)</td>
+			<td width="25%">寅(Tora/Tiger)</td>
+			<td width="25%">卯(U/Hare)</td>
+		</tr>
+		<tr>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611897-6d032d00-0a9d-11eb-86c4-de1c50c0d7b6.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611906-6ffe1d80-0a9d-11eb-9054-4e68c42e52ca.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611912-712f4a80-0a9d-11eb-8cb8-fc7097e16f60.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611915-72607780-0a9d-11eb-9995-66524ce4f978.jpg" width="100%"></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<tbody>
+		<tr>
+			<td width="25%">辰(Tatsu/Dragon)</td>
+			<td width="25%">巳(Mi/Snake)</td>
+			<td width="25%">午(Uma/Horse)</td>
+			<td width="25%">未(Hitsuji/Ram)</td>
+		</tr>
+		<tr>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611920-7391a480-0a9d-11eb-8e74-db39acf90f83.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611922-742a3b00-0a9d-11eb-8a21-8bdf207db9bb.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611928-755b6800-0a9d-11eb-86c0-67605ffd6e9b.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611930-768c9500-0a9d-11eb-81c6-067b632dc43d.jpg" width="100%"></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<tbody>
+		<tr>
+			<td width="25%">申(Saru/Monkey)</td>
+			<td width="25%">酉(Tori/Bird)</td>
+			<td width="25%">戌(Inu/Dog)</td>
+			<td width="25%">亥(I/Boar)</td>
+		</tr>
+		<tr>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611931-77252b80-0a9d-11eb-97d6-e3efc6f1aac3.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611935-77bdc200-0a9d-11eb-95e1-feb8bf7f61de.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611936-78eeef00-0a9d-11eb-90b3-f565e4763c50.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611938-7a201c00-0a9d-11eb-9d5f-1daf2405f20f.jpg" width="100%"></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<tbody>
+		<tr>
+			<td width="25%">壬(Mizunoe)</td>
+			<td width="25%">合掌(Gassho/Hnad Claps)</td>
+			<td width="25%">-</td>
+			<td width="25%">-</td>
+		</tr>
+		<tr>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611947-7c827600-0a9d-11eb-97ae-9d7eabc58cd5.jpg" width="100%"></td>
+			<td><img src="https://user-images.githubusercontent.com/37477845/95611943-7b514900-0a9d-11eb-97be-4fda80d17879.jpg" width="100%"></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
 
 ### データセットの枚数
 総枚数：6377枚(内アニメ画像：2651枚)<br>
