@@ -9,10 +9,10 @@ from collections import deque
 
 import cv2 as cv
 import numpy as np
-import tensorflow as tf
 
 from utils import CvFpsCalc
 from utils import CvDrawText
+from model.yolox.yolox_onnx import YoloxONNX
 
 
 def get_args():
@@ -23,11 +23,43 @@ def get_args():
     parser.add_argument("--height", help='cap height', type=int, default=540)
     parser.add_argument("--file", type=str, default=None)
 
-    parser.add_argument("--fps", type=int, default=10)
+    parser.add_argument("--fps", type=int, default=15)
     parser.add_argument("--skip_frame", type=int, default=0)
 
-    parser.add_argument("--model", default='model/EfficientDetD0/saved_model')
-    parser.add_argument("--score_th", type=float, default=0.75)
+    parser.add_argument(
+        "--model",
+        type=str,
+        default='model/yolox/yolox_nano.onnx',
+    )
+    parser.add_argument(
+        '--input_shape',
+        type=str,
+        default="416,416",
+        help="Specify an input shape for inference.",
+    )
+    parser.add_argument(
+        '--score_th',
+        type=float,
+        default=0.7,
+        help='Class confidence',
+    )
+    parser.add_argument(
+        '--nms_th',
+        type=float,
+        default=0.45,
+        help='NMS IoU threshold',
+    )
+    parser.add_argument(
+        '--nms_score_th',
+        type=float,
+        default=0.1,
+        help='NMS Score threshold',
+    )
+    parser.add_argument(
+        "--with_p6",
+        action="store_true",
+        help="Whether your model uses p6 in FPN/PAN.",
+    )
 
     parser.add_argument("--sign_interval", type=float, default=2.0)
     parser.add_argument("--jutsu_display_time", type=int, default=5)
@@ -45,17 +77,6 @@ def get_args():
     return args
 
 
-def run_inference_single_image(image, inference_func):
-    tensor = tf.convert_to_tensor(image)
-    output = inference_func(tensor)
-
-    output['num_detections'] = int(output['num_detections'][0])
-    output['detection_classes'] = output['detection_classes'][0].numpy()
-    output['detection_boxes'] = output['detection_boxes'][0].numpy()
-    output['detection_scores'] = output['detection_scores'][0].numpy()
-    return output
-
-
 def main():
     # 引数解析 #################################################################
     args = get_args()
@@ -70,7 +91,11 @@ def main():
     skip_frame = args.skip_frame
 
     model_path = args.model
+    input_shape = tuple(map(int, args.input_shape.split(',')))
     score_th = args.score_th
+    nms_th = args.nms_th
+    nms_score_th = args.nms_score_th
+    with_p6 = args.with_p6
 
     sign_interval = args.sign_interval
     jutsu_display_time = args.jutsu_display_time
@@ -89,9 +114,15 @@ def main():
     cap.set(cv.CAP_PROP_FRAME_HEIGHT, cap_height)
 
     # モデル読み込み ############################################################
-    DEFAULT_FUNCTION_KEY = 'serving_default'
-    loaded_model = tf.saved_model.load(model_path)
-    inference_func = loaded_model.signatures[DEFAULT_FUNCTION_KEY]
+    yolox = YoloxONNX(
+        model_path=model_path,
+        input_shape=input_shape,
+        class_score_th=score_th,
+        nms_th=nms_th,
+        nms_score_th=nms_score_th,
+        with_p6=with_p6,
+        providers=['CPUExecutionProvider'],
+    )
 
     # FPS計測モジュール #########################################################
     cvFpsCalc = CvFpsCalc()
@@ -153,16 +184,11 @@ def main():
         fps_result = cvFpsCalc.get()
 
         # 検出実施 #############################################################
-        frame = frame[:, :, [2, 1, 0]]  # BGR2RGB
-        image_np_expanded = np.expand_dims(frame, axis=0)
-        result_inference = run_inference_single_image(image_np_expanded,
-                                                      inference_func)
+        bboxes, scores, class_ids = yolox.inference(frame)
 
         # 検出内容の履歴追加 ####################################################
-        num_detections = result_inference['num_detections']
-        for i in range(num_detections):
-            score = result_inference['detection_scores'][i]
-            class_id = result_inference['detection_classes'][i].astype(np.int)
+        for _, score, class_id in zip(bboxes, scores, class_ids):
+            class_id = int(class_id) + 1
 
             # 検出閾値未満の結果は捨てる
             if score < score_th:
@@ -174,8 +200,8 @@ def main():
                 continue
 
             # 前回と異なる印の場合のみキューに登録
-            if len(sign_display_queue) == 0 or \
-                sign_display_queue[-1] != class_id:
+            if len(sign_display_queue
+                   ) == 0 or sign_display_queue[-1] != class_id:
                 sign_display_queue.append(class_id)
                 sign_history_queue.append(class_id)
                 sign_interval_start = time.time()  # 印の最終検出時間
@@ -202,18 +228,15 @@ def main():
         if key == 27:  # ESC：プログラム終了
             break
 
-        # FPS調整 #############################################################
-        elapsed_time = time.time() - start_time
-        sleep_time = max(0, ((1.0 / fps) - elapsed_time))
-        time.sleep(sleep_time)
-
         # 画面反映 #############################################################
         debug_image = draw_debug_image(
             debug_image,
             font_path,
             fps_result,
             labels,
-            result_inference,
+            bboxes,
+            scores,
+            class_ids,
             score_th,
             erase_bbox,
             use_display_score,
@@ -231,6 +254,11 @@ def main():
                                  cv.WINDOW_FULLSCREEN)
         cv.imshow(window_name, debug_image)
         # cv.moveWindow(window_name, 100, 100)
+
+        # FPS調整 #############################################################
+        elapsed_time = time.time() - start_time
+        sleep_time = max(0, ((1.0 / fps) - elapsed_time))
+        time.sleep(sleep_time)
 
     cap.release()
     cv.destroyAllWindows()
@@ -262,7 +290,9 @@ def draw_debug_image(
     font_path,
     fps_result,
     labels,
-    result_inference,
+    bboxes,
+    scores,
+    class_ids,
     score_th,
     erase_bbox,
     use_display_score,
@@ -279,18 +309,15 @@ def draw_debug_image(
 
     # 印のバウンディングボックスの重畳表示(表示オプション有効時) ###################
     if not erase_bbox:
-        num_detections = result_inference['num_detections']
-        for i in range(num_detections):
-            score = result_inference['detection_scores'][i]
-            bbox = result_inference['detection_boxes'][i]
-            class_id = result_inference['detection_classes'][i].astype(np.int)
+        for bbox, score, class_id in zip(bboxes, scores, class_ids):
+            class_id = int(class_id) + 1
 
             # 検出閾値未満のバウンディングボックスは捨てる
             if score < score_th:
                 continue
 
-            x1, y1 = int(bbox[1] * frame_width), int(bbox[0] * frame_height)
-            x2, y2 = int(bbox[3] * frame_width), int(bbox[2] * frame_height)
+            x1, y1 = int(bbox[0]), int(bbox[1])
+            x2, y2 = int(bbox[2]), int(bbox[3])
 
             # バウンディングボックス(長い辺にあわせて正方形を表示)
             x_len = x2 - x1
