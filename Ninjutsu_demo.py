@@ -23,7 +23,7 @@ def get_args():
     parser.add_argument("--height", help='cap height', type=int, default=540)
     parser.add_argument("--file", type=str, default=None)
 
-    parser.add_argument("--fps", type=int, default=15)
+    parser.add_argument("--fps", type=int, default=30)
     parser.add_argument("--skip_frame", type=int, default=0)
 
     parser.add_argument(
@@ -121,7 +121,7 @@ def main():
         nms_th=nms_th,
         nms_score_th=nms_score_th,
         with_p6=with_p6,
-        providers=['CPUExecutionProvider'],
+        # providers=['CPUExecutionProvider'],
     )
 
     # FPS計測モジュール #########################################################

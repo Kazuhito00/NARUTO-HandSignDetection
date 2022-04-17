@@ -1,4 +1,4 @@
-[Japanese/[English](README_EN.md)]
+[Japanese/[English](https://github.com/Kazuhito00/NARUTO-HandSignDetection/blob/main/README_EN.md)]
 
 ---
 # NARUTO-HandSignDetection
@@ -23,30 +23,30 @@
 ---
 
 # Title
-Deep写輪眼：オブジェクト検出 YOLOX を用いた NARUTO の印認識<br>
+Deep写輪眼：オブジェクト検出 EfficientDet を用いた NARUTO の印認識<br>
 
 # Abstract
 このリポジトリは、<span id="cite_ref-2">NARUTO</span><sup>[2](#cite_note-2)</sup> の印を認識するための訓練済みモデルとサンプルプログラムを公開しています。<br><br>
 忍術の発動は、一部の忍術をのぞき手で印を結ぶことが必要です。<br>
 また、性質変化は印に特徴が現れるため(火遁→寅の印、土遁→亥の印など)、<br>
 印を素早く認識することが出来れば、忍同士の戦闘においてアドバンテージを得ることが出来ます。<br>
-印の認識にはディープラーニングの物体検出モデルの一つYOLOX-Nanoを使用することで、<br>
-前回バージョンのDeep写輪眼(EfficientDet-D0利用)よりも推論速度を大幅にアップしました。<br>
+印の認識にはディープラーニングの物体検出モデルの一つEfficientDet-D0を使用することで、<br>
+過去に試験的に作成していたDeep写輪眼(MobileNetV2 SSD 300x300利用)よりも精度を大幅にアップしました。<br>
+(<span id="cite_ref-3">Tensorflow2 Object Detection API</span><sup>[3](#cite_note-3)</sup>を使用)
 
 <!--# Introduction
 -->
 # Requirements
-* onnxruntime 1.10.0 or Later
+* Tensorflow 2.3.0 or Later
 * OpenCV 3.4.2 or Later
 * Pillow 6.1.0 or Later (Ninjutsu_demo.pyを動かす場合のみ)
-* Tensorflow 2.3.0 or Later (SSD、EfficientDetを動かす場合のみ)
 
 # DataSet
 ### データセットについて
 データセットは非公開です（訓練済みのモデルは公開します）<br>
-※<span id="cite_ref-3">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[3](#cite_note-3)</sup>に準拠
+※<span id="cite_ref-4">日本の著作権法 第四十七条の七「複製権の制限により作成された複製物の譲渡」</span><sup>[4](#cite_note-4)</sup>に準拠
 
-また、自分で撮影した画像、アニメ画像の他に、<span id="cite_ref-4">naruto-hand-sign-dataset</span><sup>[4](#cite_note-4)</sup>を利用しています。
+また、自分で撮影した画像、アニメ画像の他に、<span id="cite_ref-5">naruto-hand-sign-dataset</span><sup>[5](#cite_note-5)</sup>を利用しています。
 
 ### お願い事項
 データセットはネット上で収集した画像と、自前で撮影した画像で構成されているため、<br>
@@ -124,36 +124,42 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 </table>
 
 ### データセットの枚数
-総枚数：10026(内アニメ画像：2651枚)<br>
-タグ付き枚数：7098枚<br>
-タグ無し枚数：2928枚<br>
-アノテーションボックス数：8941個<br>
-<img src="https://user-images.githubusercontent.com/37477845/163701957-529d7510-88e4-420f-8099-5dd6f6d9a8cf.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/163701962-a4818eba-3b4f-4c92-a7b9-f2331b7f3f23.png" width="50%">
+総枚数：6377枚(内アニメ画像：2651枚)<br>
+タグ付き枚数：4903枚<br>
+タグ無し枚数：1474枚<br>
+アノテーションボックス数：6037個<br>
+<img src="https://user-images.githubusercontent.com/37477845/95611949-7db3a300-0a9d-11eb-97a9-dc988bd3f608.png" width="35%">　<img src="https://user-images.githubusercontent.com/37477845/95611950-7e4c3980-0a9d-11eb-9bcb-72888a9aaebb.png" width="50%">
 
 # Trained Model
-訓練済みモデルをmodelディレクトリ配下で公開しています。 ※旧バージョンのモデルは「_legacy」ディレクトリに移動
-* YOLOX-Nano
+訓練済みモデルをmodelディレクトリ配下で公開しています。
+* EfficientDet D0
+* MobileNetV2 SSD FPNLite 640x640
+* MobileNetV2 SSD FPNLite 640x640(TensorFlow Liteモデル：Float16量子化)
+* MobileNetV2 SSD 300x300
 
 # Directory
 <pre>
 │  simple_demo.py
+│  simple_tflite_demo.py
 │  Ninjutsu_demo.py
 │  
 ├─model
-│  └─yolox
-│      │ yolox_nano.onnx
-│      └─yolox_onnx.py
-│              
+│  ├─EfficientDetD0─saved_model
+│  ├─MobileNetV2_SSD_300x300─saved_model
+│  └─MobileNetV2_SSD_FPNLite_640x640─┬─saved_model
+│                                    └─tflite
 ├─setting─┬─labels.csv
 │         └─jutsu.csv
 │      
-├─utils
-│          
-└─_legacy
+└─utils
 </pre>
 #### simple_demo.py
 　シンプルな検出デモです。<br>
 　<img src="https://user-images.githubusercontent.com/37477845/95647513-06b4f380-0b0b-11eb-8caf-5cb092ccdb66.jpg" width="35%">
+
+#### simple_tflite_demo.py
+　tfliteファイルを用いたシンプルな検出デモです。<br>
+　<img src="https://user-images.githubusercontent.com/37477845/95647521-10d6f200-0b0b-11eb-987c-269c8c323c43.jpg" width="35%">
 
 #### Ninjutsu_demo.py
 　忍術判定のデモです。<br>
@@ -186,6 +192,7 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 デモの実行方法は以下です。
 ```bash
 python simple_demo.py
+python simple_tflite_demo.py
 python Ninjutsu_demo.py
 ```
 
@@ -197,57 +204,53 @@ python Ninjutsu_demo.py
 カメラデバイス番号の指定<br>
 デフォルト：
     * simple_demo.py：0
+    * simple_tflite_demo.py：0
     * Ninjutsu_demo.py：0
 * --file<br>
 動画ファイル名の指定 ※指定時はカメラデバイスより優先し動画を読み込む<br>
 デフォルト：
     * simple_demo.py：None
+    * simple_tflite_demo.py：None
     * Ninjutsu_demo.py：None
 * --fps<br>
 処理FPS ※推論時間がFPSを下回る場合のみ有効<br>
 デフォルト：
-    * simple_demo.py：30
-    * Ninjutsu_demo.py：30
+    * simple_demo.py：10
+    * simple_tflite_demo.py：10
+    * Ninjutsu_demo.py：10
 * --width<br>
 カメラキャプチャ時の横幅<br>
 デフォルト：
     * simple_demo.py：960
+    * simple_tflite_demo.py：960
     * Ninjutsu_demo.py：960
 * --height<br>
 カメラキャプチャ時の縦幅<br>
 デフォルト：
     * simple_demo.py：540
+    * simple_tflite_demo.py：540
     * Ninjutsu_demo.py：540
+* --model<br>
+モデル読み込みパス<br>
+デフォルト：
+    * simple_demo.py：'model/EfficientDetD0/saved_model'
+    * simple_tflite_demo.py：'model/MobileNetV2_SSD_FPNLite_640x640/tflite/model.tflite'
+    * Ninjutsu_demo.py：'model/EfficientDetD0/saved_model'
+* --score_th<br>
+物体検出閾値<br>
+デフォルト：
+    * simple_demo.py：0.75
+    * simple_tflite_demo.py：0.3
+    * Ninjutsu_demo.py：0.75
 * --skip_frame<br>
 カメラ or 動画読み込み時に何枚おきに処理を実行するか<br>
 デフォルト：
     * simple_demo.py：0
+    * simple_tflite_demo.py：0
     * Ninjutsu_demo.py：0
-* --model<br>
-ロードするモデルの格納パス<br>
-デフォルト：
-    * simple_demo.py：model/yolox/yolox_nano.onnx
-    * Ninjutsu_demo.py：model/yolox/yolox_nano.onnx
 * --input_shape<br>
-モデルの入力サイズ<br>
-デフォルト：
-    * simple_demo.py：416,416
-    * Ninjutsu_demo.py：416,416
-* --score_th<br>
-クラス判別の閾値<br>
-デフォルト：
-    * simple_demo.py：0.7
-    * Ninjutsu_demo.py：0.7
-* --nms_th<br>
-NMSの閾値<br>
-デフォルト：
-    * simple_demo.py：0.45
-    * Ninjutsu_demo.py：0.45
-* --nms_score_th<br>
-NMSのスコア閾値<br>
-デフォルト：
-    * simple_demo.py：0.1
-    * Ninjutsu_demo.py：0.1
+モデルへインプットする画像の一辺の長さ<br>
+    * simple_tflite_demo.py：640
 * --sign_interval<br>
 前回の印検出時から指定時間(秒)経過すると印の履歴をクリア<br>
 デフォルト：
@@ -278,6 +281,10 @@ NMSのスコア閾値<br>
     * Ninjutsu_demo.py：False
 </details>
 
+また、からあげさんのブログにて、より詳細な環境構築/実行方法を記載いただきました。<br>
+こちらも参考にしてもらえばと思います。
+* 「[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)」</sup>
+
 # Application Example
 アプリケーションの応用事例を紹介します。
 * [第15回UE4ぷちコン「印VADERS」](https://www.youtube.com/watch?v=K4-E5SseVtI)
@@ -288,19 +295,18 @@ NMSのスコア閾値<br>
 -->
 
 # Acknowledgements
-EfficientDetモデルトレーニング時は、からあげさんの<span id="cite_ref-5">説明記事</span><sup>[5](#cite_note-5)</sup>を参考にいたしました。<br>
-また、<span id="cite_ref-6">からあげさんのブログ</span><sup>[6](#cite_note-6)</sup>にて、Deep写輪眼をご紹介いただきました。<br>
-大変ありがとうございます。<br><br>
-YOLOXのトレーニングには<span id="cite_ref-7">YOLOX-Colaboratory-Training-Sample</span><sup>[7](#cite_note-7)</sup>を使用しています。
+モデルトレーニング時は、からあげさんの<span id="cite_ref-6">説明記事</span><sup>[6](#cite_note-6)</sup>を参考にいたしました。<br>
+また、<span id="cite_ref-7">からあげさんのブログ</span><sup>[7](#cite_note-7)</sup>にて、Deep写輪眼をご紹介いただきました。<br>
+大変ありがとうございます。
 
 # References
 1. [^](#cite_ref-1)<span id="cite_note-1">日本：[著作権法 第二十条「同一性保持権」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#183)</span>
 1. [^](#cite_ref-2)<span id="cite_note-2">岸本斉史作『[NARUTO](https://www.shonenjump.com/j/rensai/naruto.html)』集英社、1999年-2014年</span>
-1. [^](#cite_ref-3)<span id="cite_note-3">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
-1. [^](#cite_ref-4)<span id="cite_note-4">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
-1. [^](#cite_ref-5)<span id="cite_note-5">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
-1. [^](#cite_ref-6)<span id="cite_note-6">からあげさんのブログ：[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)</span>
-1. [^](#cite_ref-7)<span id="cite_note-7">[Kazuhito00/YOLOX-Colaboratory-Training-Sample](https://github.com/Kazuhito00/YOLOX-Colaboratory-Training-Sample)</span>
+1. [^](#cite_ref-3)<span id="cite_note-3">[Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)</span>
+1. [^](#cite_ref-4)<span id="cite_note-4">日本：[著作権法 四十七条の七「複製権の制限により作成された複製物の譲渡」](https://elaws.e-gov.go.jp/search/elawsSearch/elaws_search/lsg0500/detail?lawId=345AC0000000048#407)</span>
+1. [^](#cite_ref-5)<span id="cite_note-5">Kaggle 公開データセット：[naruto-hand-sign-dataset](https://www.kaggle.com/vikranthkanumuru/naruto-hand-sign-dataset)</span>
+1. [^](#cite_ref-6)<span id="cite_note-6">[「Object Detection API」で物体検出の自前データを学習する方法（TensorFlow 2.x版）](https://qiita.com/karaage0703/items/8567cc192e151bac3e50)</span>
+1. [^](#cite_ref-7)<span id="cite_note-7">からあげさんのブログ：[AIでNARUTO気分！「Deep写輪眼」で遊んでみよう](https://karaage.hatenadiary.jp/entry/2020/10/16/073000)</span>
 
 # Authors
 高橋かずひと(https://twitter.com/KzhtTkhs)
