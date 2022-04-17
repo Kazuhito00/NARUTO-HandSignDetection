@@ -1,4 +1,4 @@
-[[Japanese](https://github.com/Kazuhito00/NARUTO-HandSignDetection)/English]
+[[Japanese](https://github.com/Kazuhito00/NARUTO-HandSignDetection/tree/main/_legacy/v2)/English]
 
 ---
 # NARUTO-HandSignDetection
