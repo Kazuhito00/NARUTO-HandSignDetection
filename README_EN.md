@@ -109,7 +109,7 @@ It corresponds to 14 kinds of hand-signs(Rat-Boar, Mizunoe, Hand Claps).<br>
 	<tbody>
 		<tr>
 			<td width="25%">壬(Mizunoe)</td>
-			<td width="25%">合掌(Gassho/Hnad Claps)</td>
+			<td width="25%">合掌(Gassho/Hand Claps)</td>
 			<td width="25%">-</td>
 			<td width="25%">-</td>
 		</tr>
