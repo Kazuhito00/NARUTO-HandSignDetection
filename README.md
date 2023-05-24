@@ -110,7 +110,7 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 	<tbody>
 		<tr>
 			<td width="25%">壬(Mizunoe)</td>
-			<td width="25%">合掌(Gassho/Hnad Claps)</td>
+			<td width="25%">合掌(Gassho/Hand Claps)</td>
 			<td width="25%">-</td>
 			<td width="25%">-</td>
 		</tr>
