@@ -146,7 +146,6 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 │
 ├─post_process_gen_tools
 │      │ convert_script.sh
-│      │ make_batch_initialize.py
 │      │ make_box_gather_nd.py
 │      │ make_boxes_scores.py
 │      │ make_cxcywh_y1x1y2x2.py
