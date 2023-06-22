@@ -133,3 +133,7 @@ dmypy.json
 
 # mp4
 *.mp4
+
+# tensorrt
+*.engine
+*.profile
