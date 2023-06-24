@@ -3,7 +3,8 @@
 # pip3 install -U pip && pip3 install onnxsim
 # pip install -U simple-onnx-processing-tools \
 # && pip install -U onnx \
-# && python3 -m pip install -U onnx_graphsurgeon --index-url https://pypi.ngc.nvidia.com
+# && python3 -m pip install -U onnx_graphsurgeon --index-url https://pypi.ngc.nvidia.com \
+# && pip install tensorflow==2.12.0
 
 OPSET=11
 BATCHES=1
