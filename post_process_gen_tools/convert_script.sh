@@ -282,7 +282,7 @@ onnxsim 18_nms_yolox_${BOXES}.onnx 18_nms_yolox_${BOXES}.onnx
 
 ################################################### yolox + Post-Process
 snc4onnx \
---input_onnx_file_paths naruto_handsign_detection_yolox_nano.onnx 18_nms_yolox_${BOXES}.onnx \
+--input_onnx_file_paths yolox_nano.onnx 18_nms_yolox_${BOXES}.onnx \
 --srcop_destop output predictions \
 --output_onnx_file_path naruto_handsign_detection_yolox_nano_post.onnx
 onnxsim naruto_handsign_detection_yolox_nano_post.onnx naruto_handsign_detection_yolox_nano_post.onnx
