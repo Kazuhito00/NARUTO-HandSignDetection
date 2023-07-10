@@ -38,7 +38,7 @@ The speed has been greatly improved compared to the Deep写輪眼(using Efficien
 * onnxruntime 1.10.0 or Later
 * OpenCV 3.4.2 or Later
 * Pillow 6.1.0 or Later (Only when running Ninjutsu_demo.py)
-* Tensorflow 2.3.0 or Later (Only when running SSD or EfficientDet)
+* Tensorflow 2.3.0 or Later (Only when running SSD or EfficientDet, or only when merging post-processing into ONNX)
 
 # DataSet
 ### About the dataset
@@ -137,17 +137,28 @@ The trained model is published under the 'model' directory. * Move the old versi
 <pre>
 │  simple_demo.py
 │  Ninjutsu_demo.py
-│  
+│
 ├─model
 │  └─yolox
 │      │ yolox_nano.onnx
 │      └─yolox_onnx.py
-│              
+│
+├─post_process_gen_tools
+│      │ convert_script.sh
+│      │ make_box_gather_nd.py
+│      │ make_boxes_scores.py
+│      │ make_cxcywh_y1x1y2x2.py
+│      │ make_final_batch_nums_final_class_nums_final_box_nums.py
+│      │ make_grids.py
+│      │ make_input_output_shape_update.py
+│      │ make_nms_outputs_merge.py
+│      └─make_score_gather_nd.py
+│
 ├─setting─┬─labels.csv
 │         └─jutsu.csv
-│      
+│
 ├─utils
-│          
+│
 └─_legacy
 </pre>
 #### simple_demo.py
@@ -185,13 +196,14 @@ The name of the Ninjutsu name and the required hand-sign are listed.<br>
 Here's how to run the demo.
 ```bash
 python simple_demo.py
+python simple_demo_without_post.py
 python Ninjutsu_demo.py
 ```
 
 In addition, the following options can be specified when running the demo.
 <details>
 <summary>Option specification</summary>
-   
+
 * --device<br>
 Camera device number<br>
 Default：
@@ -308,7 +320,7 @@ Kazuhito Takahashi(https://twitter.com/KzhtTkhs)
 # Affiliations(所属)
 -->
 
-# License 
+# License
 NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 # License(Font)

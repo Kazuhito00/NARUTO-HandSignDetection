@@ -39,7 +39,7 @@ Deep写輪眼：オブジェクト検出 YOLOX を用いた NARUTO の印認識<
 * onnxruntime 1.10.0 or Later
 * OpenCV 3.4.2 or Later
 * Pillow 6.1.0 or Later (Ninjutsu_demo.pyを動かす場合のみ)
-* Tensorflow 2.3.0 or Later (SSD、EfficientDetを動かす場合のみ)
+* Tensorflow 2.3.0 or Later (SSD、EfficientDetを動かす場合、あるいは後処理をONNXへマージするときのみ)
 
 # DataSet
 ### データセットについて
@@ -138,17 +138,28 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 <pre>
 │  simple_demo.py
 │  Ninjutsu_demo.py
-│  
+│
 ├─model
 │  └─yolox
 │      │ yolox_nano.onnx
 │      └─yolox_onnx.py
-│              
+│
+├─post_process_gen_tools
+│      │ convert_script.sh
+│      │ make_box_gather_nd.py
+│      │ make_boxes_scores.py
+│      │ make_cxcywh_y1x1y2x2.py
+│      │ make_final_batch_nums_final_class_nums_final_box_nums.py
+│      │ make_grids.py
+│      │ make_input_output_shape_update.py
+│      │ make_nms_outputs_merge.py
+│      └─make_score_gather_nd.py
+│
 ├─setting─┬─labels.csv
 │         └─jutsu.csv
-│      
+│
 ├─utils
-│          
+│
 └─_legacy
 </pre>
 #### simple_demo.py
@@ -163,6 +174,9 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 
 #### model
 　訓練済みモデルを格納しています。
+
+#### post_process_gen_tools
+　ONNXにすべての後処理をマージするスクリプト群を格納しています。
 
 #### setting
 　ラベルデータ(labels.csv)と術名データ(jutsu.csv)を格納しています。
@@ -186,13 +200,14 @@ Issueで誤検出した条件を教えていただると助かります。<br>
 デモの実行方法は以下です。
 ```bash
 python simple_demo.py
+python simple_demo_without_post.py
 python Ninjutsu_demo.py
 ```
 
 また、デモ実行時には、以下のオプションが指定可能です。
 <details>
 <summary>オプション指定</summary>
-   
+
 * --device<br>
 カメラデバイス番号の指定<br>
 デフォルト：
@@ -308,7 +323,7 @@ YOLOXのトレーニングには<span id="cite_ref-7">YOLOX-Colaboratory-Trainin
 # Affiliations(所属)
 -->
 
-# License 
+# License
 NARUTO-HandSignDetection is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 # License(Font)
